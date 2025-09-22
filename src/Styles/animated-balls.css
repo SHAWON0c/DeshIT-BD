@@ -1,0 +1,131 @@
+.animate-ball .ball {
+  background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0.7;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.animate-ball .ball:nth-child(1) {
+  height: 50px;
+  width: 50px;
+  top: 37%;
+  left: 10%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-animation: zoommd 1.5s infinite alternate;
+  animation: zoommd 1.5s infinite alternate;
+}
+
+.animate-ball .ball:nth-child(2) {
+  height: 70px;
+  width: 70px;
+  bottom: 22%;
+  right: 8%;
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  -webkit-animation: bounce 4s infinite alternate;
+  animation: bounce 4s infinite alternate;
+}
+
+.animate-ball .ball:nth-child(3) {
+  height: 100px;
+  width: 100px;
+  bottom: 43%;
+  right: 22%;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  -webkit-animation: zoommd 1.5s infinite alternate;
+  animation: zoommd 1.5s infinite alternate;
+}
+
+.animate-ball .ball:nth-child(4) {
+  height: 40px;
+  width: 40px;
+  bottom: 20%;
+  right: 32%;
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  -webkit-animation: movexy 1.5s infinite alternate;
+  animation: movexy 1.5s infinite alternate;
+}
+
+.animate-ball .ball:nth-child(5) {
+  height: 200px;
+  width: 200px;
+  top: -25%;
+  right: 100px;
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  opacity: 0.3;
+  -webkit-animation: wave 3s 0.1s infinite linear;
+  animation: wave 3s 0.1s infinite linear;
+}
+
+/* Adding keyframe animations for the balls */
+@keyframes zoommd {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes movexy {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(10px, -10px);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes zoommd {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+  }
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-20px);
+  }
+}
+
+@-webkit-keyframes movexy {
+  0% {
+    -webkit-transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(10px, -10px);
+  }
+}
+
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
