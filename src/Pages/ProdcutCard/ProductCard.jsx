@@ -24,7 +24,7 @@ const ProductCard = () => {
     productData.forEach((_, i) => {
       setTimeout(() => {
         setVisible((prev) => [...prev, i]);
-      }, i * 500); // super tight stagger for smooth flow
+      }, i * 500); 
     });
   }, []);
 

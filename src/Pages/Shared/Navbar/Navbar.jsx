@@ -78,7 +78,7 @@ const Navbar = () => {
               <Link
                 to="/"
                 className={`transition-colors ${
-                  scrolled ? "text-gray-600 hover:text-gray-800" : "text-white hover:text-gray-200"
+                  scrolled ? "text-black hover:text-gray-800" : "text-black hover:text-gray-200"
                 }`}
               >
                 Home
@@ -86,8 +86,18 @@ const Navbar = () => {
             </li>
             <li>
               <Link
+                to="/services"
+                className={`transition-colors ${
+                  scrolled ? "text-black hover:text-gray-800" : "text-black hover:text-gray-200"
+                }`}
+              >
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="/products"
-                className="text-red-500 font-medium"
+                className="text-black font-medium"
               >
                 Products
               </Link>
@@ -96,7 +106,7 @@ const Navbar = () => {
               <Link
                 to="/projects"
                 className={`transition-colors ${
-                  scrolled ? "text-gray-600 hover:text-gray-800" : "text-white hover:text-gray-200"
+                  scrolled ? "text-black hover:text-gray-800" : "text-black hover:text-gray-200"
                 }`}
               >
                 Projects
@@ -106,7 +116,7 @@ const Navbar = () => {
               <Link
                 to="/company"
                 className={`transition-colors ${
-                  scrolled ? "text-gray-600 hover:text-gray-800" : "text-white hover:text-gray-200"
+                  scrolled ? "text-black hover:text-gray-800" : "text-black hover:text-gray-200"
                 }`}
               >
                 Company
@@ -116,7 +126,7 @@ const Navbar = () => {
               <Link
                 to="/contact"
                 className={`transition-colors ${
-                  scrolled ? "text-gray-600 hover:text-gray-800" : "text-white hover:text-gray-200"
+                  scrolled ? "text-black hover:text-gray-800" : "text-black hover:text-gray-200"
                 }`}
               >
                 Contact
@@ -126,7 +136,7 @@ const Navbar = () => {
               <Link
                 to="/training"
                 className={`transition-colors ${
-                  scrolled ? "text-gray-600 hover:text-gray-800" : "text-white hover:text-gray-200"
+                  scrolled ? "text-black hover:text-gray-800" : "text-black hover:text-gray-200"
                 }`}
               >
                 Training
