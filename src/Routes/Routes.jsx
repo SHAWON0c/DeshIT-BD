@@ -5,7 +5,9 @@ import {
 } from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home/Home";
-import Services from "../Pages/Services/Services";
+import ServicesMain from "../Pages/Services/ServicesMain";
+import ProjectSection from "../Pages/Projects/ProjectSection";
+import TrainingSection from "../Pages/Training/TrainingSection";
 
 export const router = createBrowserRouter([
   {
@@ -18,7 +20,15 @@ export const router = createBrowserRouter([
       },
       {
         path:'services',
-        element:<Services></Services>
+        element:<ServicesMain></ServicesMain>
+      },
+      {
+        path:'projects',
+        element:<ProjectSection></ProjectSection>
+      },
+      {
+        path:'training',
+        element:<TrainingSection></TrainingSection>
       }
     ]
 
