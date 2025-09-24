@@ -1,13 +1,31 @@
-// constants/pageMeta.js
-
+// Constant/pageMeta.js
 const pageMeta = {
-  singlePage: {
-    title: "Welcome to Our Single Page",
-    breadcrumbs: [
-      { label: "Home", href: "/" },
-      { label: "Current Section" } // no href = current location
-    ]
-  }
+    home: {
+        title: "Home",
+        breadcrumbs: [{ label: "HomePage" }]
+    },
+    product: {
+        title: "Our Product",
+        breadcrumbs: [
+            { label: "Home", href: "/" },
+            { label: "Our Product" }
+        ]
+    },
+     projects: {
+        title: "Our Projects",
+        breadcrumbs: [
+            { label: "Home", href: "/" },
+            { label: "Our Projects" }
+        ]
+    },
+    training: {
+        title: "Training",
+        breadcrumbs: [
+            { label: "Home", href: "/" },
+            { label: "Training" }
+        ]
+    },
+    // Add more routes as needed
 };
 
 export default pageMeta;

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "../../Components/Card/Card";
+import GlobalSpinner from "../../Components/Spinner/GlobalSpinner"; // Import your global spinner
 
 import product1 from "../../assets/Images/Product/product-1.png";
 import product2 from "../../assets/Images/Product/product-2.png";
@@ -19,38 +20,57 @@ const productData = [
 
 const ProductCard = () => {
   const [visible, setVisible] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    productData.forEach((_, i) => {
-      setTimeout(() => {
-        setVisible((prev) => [...prev, i]);
-      }, i * 500); 
-    });
+    // Simulate loading delay
+    const loaderTimer = setTimeout(() => {
+      setLoading(false);
+
+      // Trigger staggered animation after loader done
+      productData.forEach((_, i) => {
+        setTimeout(() => {
+          setVisible((prev) => [...prev, i]);
+        }, i * 300); // 300ms stagger
+      });
+    }, 500); // 1.5 seconds loader
+
+    return () => clearTimeout(loaderTimer);
   }, []);
 
   return (
-    <div className=" py-32 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 w-full max-w-[1200px] mx-auto">
-      {productData.map((product, index) => (
-        <div
-          key={index}
-          className={`transform transition-all duration-[900ms] opacity-0 translate-y-12`}
-          style={{
-            opacity: visible.includes(index) ? 1 : 0,
-            transform: visible.includes(index)
-              ? "translateY(0)"
-              : "translateY(80px)",
-            transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)", // smooth ease out
-            transitionProperty: "opacity, transform",
-          }}
-        >
-          <Card
-            title={product.title}
-            image={product.image}
-            onClick={() => alert(`${product.title} clicked!`)}
-          />
-        </div>
-      ))}
-    </div>
+    <>
+      {/* Overlay spinner, visible while loading */}
+      <GlobalSpinner visible={loading} />
+
+      {/* Product grid, fade in/out with loading */}
+      <div
+        className={`mt-16 mb-32 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-20 w-full max-w-[1200px] mx-auto transition-opacity duration-500 ${
+          loading ? "opacity-0 pointer-events-none" : "opacity-100"
+        }`}
+      >
+        {productData.map((product, index) => (
+          <div
+            key={index}
+            className="transform transition-all duration-[900ms]"
+            style={{
+              opacity: visible.includes(index) ? 1 : 0,
+              transform: visible.includes(index)
+                ? "translateY(0)"
+                : "translateY(80px)",
+              transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)", // smooth ease out
+              transitionProperty: "opacity, transform",
+            }}
+          >
+            <Card
+              title={product.title}
+              image={product.image}
+              onClick={() => alert(`${product.title} clicked!`)}
+            />
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 

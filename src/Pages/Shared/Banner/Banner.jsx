@@ -1,9 +1,36 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import pageMeta from "../../../Constant/pageMeta";
 
 const Banner = () => {
+    const location = useLocation();
+    const path = location.pathname;
 
-    const { title, breadcrumbs } = pageMeta.singlePage;
+    // ❌ Don't render banner on services page
+    if (path === "/services") {
+        return null;
+    }
+
+    // ✅ Set page key based on path
+    let pageKey = "home"; // default to home
+
+    if (path.includes("/product")) {
+        pageKey = "product";
+    }
+    else if (path.includes("/projects")) {
+        pageKey = "projects";
+
+    }
+    else if (path.includes("/training")) {
+        pageKey = "training";
+    }
+    // Add more conditions as needed
+    // else if (path.includes("/about")) {
+    //     pageKey = "about";
+    // }
+
+    const { title, breadcrumbs } = pageMeta[pageKey] || { title: "", breadcrumbs: [] };
+
     return (
         <div>
             <section className="page-banner pt-20">
@@ -31,28 +58,22 @@ const Banner = () => {
                     className="circle"
                     data-parallax='{"x" : -200}'
                     xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
                     width="950px"
                     height="950px"
                     style={{
-                        transform:
-                            "translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)",
-                        WebkitTransform:
-                            "translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)",
+                        transform: "translate3d(0px, 0px, 0px)",
+                        WebkitTransform: "translate3d(0px, 0px, 0px)",
                     }}
                 >
                     <path
                         fillRule="evenodd"
                         stroke="rgb(250, 112, 112)"
                         strokeWidth="100px"
-                        strokeLinecap="butt"
-                        strokeLinejoin="miter"
                         opacity="0.25"
                         fill="none"
                         d="M450.000,50.000 C670.914,50.000 850.000,229.086 850.000,450.000 C850.000,670.914 670.914,850.000 450.000,850.000 C229.086,850.000 50.000,670.914 50.000,450.000 C50.000,229.086 229.086,50.000 450.000,50.000 Z"
                     />
                 </svg>
-
 
                 <ul className="animate-ball">
                     <li className="ball"></li>
@@ -62,7 +83,6 @@ const Banner = () => {
                     <li className="ball"></li>
                 </ul>
             </section>
-
         </div>
     );
 };

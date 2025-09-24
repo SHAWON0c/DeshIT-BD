@@ -1,19 +1,31 @@
 import React from 'react';
 
+import img1 from '../../assets/Images/Icons/DevelopmentSection/vector1.png'
+import img2 from '../../assets/Images/Icons/DevelopmentSection/vector2.png'
+import img3 from '../../assets/Images/Icons/DevelopmentSection/vector3.png'
+import img4 from '../../assets/Images/Icons/DevelopmentSection/vector4.png'
+import img5 from '../../assets/Images/Icons/DevelopmentSection/vector5.png'
+import img6 from '../../assets/Images/Icons/DevelopmentSection/vector6.png'
+import img7 from '../../assets/Images/Icons/DevelopmentSection/vector7.png'
+import img8 from '../../assets/Images/Icons/DevelopmentSection/vector8.png'
+import img9 from '../../assets/Images/Icons/DevelopmentSection/vector9.png'
+import img10 from '../../assets/Images/Icons/DevelopmentSection/vector10.png'
+import img11 from '../../assets/Images/Icons/DevelopmentSection/vector11.png'
+import img12 from '../../assets/Images/Icons/DevelopmentSection/vector12.png'
+import img13 from '../../assets/Images/Icons/DevelopmentSection/vector1.png'
+import img14 from '../../assets/Images/Icons/DevelopmentSection/vector14.png'
 const SoftwareServices = () => {
     return (
         <div>
             <div className="w-full mx-auto ">
-      <div className="border-2 border-blue-500 p-8">
-        <h2 className="text-center text-xl font-semibold mb-8 text-gray-800">Software Development Services</h2>
+      <div className="">
+        <h2 className="text-center text-xl font-semibold mb-20 text-gray-800">Software Development Services</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Mobile App Development */}
-          <div className="text-center">
-            <div className="w-12 h-12 mx-auto mb-4 bg-orange-100 rounded-lg flex items-center justify-center">
-              <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17 2H7c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM7 4h10v16H7V4z" />
-              </svg>
+          <div className="text-center w-full max-w-[291px] h-[238px]">
+            <div className="w-6 h-6 mx-auto mb-10 bg-white flex items-center justify-center ">
+              <img src={img1} alt="" />
             </div>
             <h3 className="font-semibold text-gray-800 mb-2">Mobile App Development</h3>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -24,11 +36,9 @@ const SoftwareServices = () => {
           </div>
 
           {/* Web Development */}
-          <div className="text-center">
-            <div className="w-12 h-12 mx-auto mb-4 bg-orange-100 rounded-lg flex items-center justify-center">
-              <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-              </svg>
+          <div className="text-center w-full max-w-[291px] h-[238px]">
+            <div className="w-6 h-6 mx-auto mb-10 bg-white flex items-center justify-center ">
+              <img src={img2} alt="" />
             </div>
             <h3 className="font-semibold text-gray-800 mb-2">Web Development</h3>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -38,11 +48,9 @@ const SoftwareServices = () => {
           </div>
 
           {/* UI/UX Design */}
-          <div className="text-center">
-            <div className="w-12 h-12 mx-auto mb-4 bg-orange-100 rounded-lg flex items-center justify-center">
-              <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
+          <div className="text-center w-full max-w-[291px] h-[238px]">
+            <div className="w-6 h-6 mx-auto mb-10 bg-white flex items-center justify-center ">
+              <img src={img3} alt="" />
             </div>
             <h3 className="font-semibold text-gray-800 mb-2">UI/UX Design</h3>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -53,11 +61,9 @@ const SoftwareServices = () => {
           </div>
 
           {/* DevOps */}
-          <div className="text-center">
-            <div className="w-12 h-12 mx-auto mb-4 bg-orange-100 rounded-lg flex items-center justify-center">
-              <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-              </svg>
+          <div className="text-center w-full max-w-[291px] h-[238px]">
+            <div className="w-6 h-6 mx-auto mb-10 bg-white flex items-center justify-center ">
+              <img src={img4} alt="" />
             </div>
             <h3 className="font-semibold text-gray-800 mb-2">DevOps</h3>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -67,11 +73,9 @@ const SoftwareServices = () => {
           </div>
 
           {/* Quality Assurance */}
-          <div className="text-center">
-            <div className="w-12 h-12 mx-auto mb-4 bg-orange-100 rounded-lg flex items-center justify-center">
-              <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-              </svg>
+          <div className="text-center w-full max-w-[291px] h-[238px]">
+            <div className="w-6 h-6 mx-auto mb-10 bg-white flex items-center justify-center ">
+              <img src={img5} alt="" />
             </div>
             <h3 className="font-semibold text-gray-800 mb-2">Quality Assurance</h3>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -81,11 +85,9 @@ const SoftwareServices = () => {
           </div>
 
           {/* Cyber Security */}
-          <div className="text-center">
-            <div className="w-12 h-12 mx-auto mb-4 bg-orange-100 rounded-lg flex items-center justify-center">
-              <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11H16V16H8V11H9.2V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.4,8.7 10.4,10V11H13.6V10C13.6,8.7 12.8,8.2 12,8.2Z" />
-              </svg>
+          <div className="text-center w-full max-w-[291px] h-[238px]">
+            <div className="w-6 h-6 mx-auto mb-10 bg-white flex items-center justify-center ">
+              <img src={img6} alt="" />
             </div>
             <h3 className="font-semibold text-gray-800 mb-2">Cyber Security</h3>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -96,11 +98,9 @@ const SoftwareServices = () => {
           </div>
 
           {/* Salesforce */}
-          <div className="text-center">
-            <div className="w-12 h-12 mx-auto mb-4 bg-orange-100 rounded-lg flex items-center justify-center">
-              <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-              </svg>
+          <div className="text-center w-full max-w-[291px] h-[238px]">
+            <div className="w-6 h-6 mx-auto mb-10 bg-white flex items-center justify-center ">
+              <img src={img7} alt="" />
             </div>
             <h3 className="font-semibold text-gray-800 mb-2">Salesforce</h3>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -111,11 +111,9 @@ const SoftwareServices = () => {
           </div>
 
           {/* Odoo */}
-          <div className="text-center">
-            <div className="w-12 h-12 mx-auto mb-4 bg-orange-100 rounded-lg flex items-center justify-center">
-              <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
-              </svg>
+          <div className="text-center w-full max-w-[291px] h-[238px]">
+            <div className="w-6 h-6 mx-auto mb-10 bg-white flex items-center justify-center ">
+              <img src={img8} alt="" />
             </div>
             <h3 className="font-semibold text-gray-800 mb-2">Odoo</h3>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -125,11 +123,9 @@ const SoftwareServices = () => {
           </div>
 
           {/* Magento */}
-          <div className="text-center">
-            <div className="w-12 h-12 mx-auto mb-4 bg-orange-100 rounded-lg flex items-center justify-center">
-              <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M2 17h20v2H2zm1.15-4.05L4 11l.85 1.95L6.7 11l1.85 1.95L10.4 11l1.85 1.95L14.1 11l1.85 1.95L17.8 11l1.85 1.95L21.5 11H23l-1.5 3.5L20 17H4l-1.5-2.5L1 11h1.5l.65 1.95z" />
-              </svg>
+          <div className="text-center w-full max-w-[291px] h-[238px]">
+            <div className="w-6 h-6 mx-auto mb-10 bg-white flex items-center justify-center ">
+              <img src={img9} alt="" />
             </div>
             <h3 className="font-semibold text-gray-800 mb-2">Magento</h3>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -139,11 +135,9 @@ const SoftwareServices = () => {
           </div>
 
           {/* Drupal */}
-          <div className="text-center">
-            <div className="w-12 h-12 mx-auto mb-4 bg-orange-100 rounded-lg flex items-center justify-center">
-              <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-              </svg>
+          <div className="text-center w-full max-w-[291px] h-[238px]">
+            <div className="w-6 h-6 mx-auto mb-10 bg-white flex items-center justify-center ">
+              <img src={img10} alt="" />
             </div>
             <h3 className="font-semibold text-gray-800 mb-2">Drupal</h3>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -153,11 +147,9 @@ const SoftwareServices = () => {
           </div>
 
           {/* Ruby On Rails */}
-          <div className="text-center">
-            <div className="w-12 h-12 mx-auto mb-4 bg-orange-100 rounded-lg flex items-center justify-center">
-              <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-              </svg>
+          <div className="text-center w-full max-w-[291px] h-[238px]">
+            <div className="w-6 h-6 mx-auto mb-10 bg-white flex items-center justify-center ">
+              <img src={img11} alt="" />
             </div>
             <h3 className="font-semibold text-gray-800 mb-2">Ruby On Rails</h3>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -168,11 +160,9 @@ const SoftwareServices = () => {
           </div>
 
           {/* Node.JS Development */}
-          <div className="text-center">
-            <div className="w-12 h-12 mx-auto mb-4 bg-orange-100 rounded-lg flex items-center justify-center">
-              <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-              </svg>
+          <div className="text-center w-full max-w-[291px] h-[238px]">
+            <div className="w-6 h-6 mx-auto mb-10 bg-white flex items-center justify-center ">
+              <img src={img12} alt="" />
             </div>
             <h3 className="font-semibold text-gray-800 mb-2">Node.JS Development</h3>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -183,11 +173,9 @@ const SoftwareServices = () => {
           </div>
 
           {/* PHP Development */}
-          <div className="text-center">
-            <div className="w-12 h-12 mx-auto mb-4 bg-orange-100 rounded-lg flex items-center justify-center">
-              <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-              </svg>
+          <div className="text-center w-full max-w-[291px] h-[238px]">
+            <div className="w-6 h-6 mx-auto mb-10 bg-white flex items-center justify-center ">
+              <img src={img13} alt="" />
             </div>
             <h3 className="font-semibold text-gray-800 mb-2">PHP Development</h3>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -198,11 +186,9 @@ const SoftwareServices = () => {
           </div>
 
           {/* Angular JS And ReactJS */}
-          <div className="text-center">
-            <div className="w-12 h-12 mx-auto mb-4 bg-orange-100 rounded-lg flex items-center justify-center">
-              <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-              </svg>
+          <div className="text-center w-full max-w-[291px] h-[238px]">
+            <div className="w-6 h-6 mx-auto mb-10 bg-white flex items-center justify-center ">
+              <img src={img14} alt="" />
             </div>
             <h3 className="font-semibold text-gray-800 mb-2">Angular JS And ReactJS</h3>
             <p className="text-sm text-gray-600 leading-relaxed">

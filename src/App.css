@@ -116,6 +116,15 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* In index.css or App.css */
+/* global styles like index.css or App.css */
+body {
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -255,6 +264,32 @@
   top:-150px;
   z-index: 0;
 }
+
+
+.typing-text {
+  --typing-speed: 4s; /* default duration */
+  --steps: 30; /* default number of characters */
+
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid orange;
+  font-weight: bold;
+  font-size: 3rem; /* adjust as needed */
+  width: 0ch;
+  animation:
+    typing var(--typing-speed) steps(var(--steps)) forwards,
+    blink 0.7s step-start infinite;
+}
+
+@keyframes typing {
+  from { width: 0ch; }
+  to { width: var(--steps)ch; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
 
 
 

@@ -8,6 +8,7 @@ import Home from "../Pages/Home/Home/Home";
 import ServicesMain from "../Pages/Services/ServicesMain";
 import ProjectSection from "../Pages/Projects/ProjectSection";
 import TrainingSection from "../Pages/Training/TrainingSection";
+import ProductCard from "../Pages/ProdcutCard/ProductCard";
 
 export const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ export const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>
+      },
+      {
+        path:'products',
+        element:<ProductCard></ProductCard>
       },
       {
         path:'services',
