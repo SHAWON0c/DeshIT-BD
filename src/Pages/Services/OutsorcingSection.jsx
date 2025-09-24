@@ -47,30 +47,30 @@ const OutsorcingSection = () => {
       <div className="mt-10">
         <div className="text-center mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Benefits of Software Development Outsourcing</h2>
-          <p className="text-black font-light text-2xl mx-auto mb-20">
+          <p className="text-black font-light text-base lg:text-2xl mx-auto mb-20">
             Outsourcing software development cuts costs, gives you access to expert skills, and offers flexibility. It
             accelerates project timelines, minimizes risks, and introduces new global ideas to your work.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="text-left">
-              <div className="flex gap-2 mb-4">
-                <div className=" rounded-lg w-full">
-                  <img
-                 
-                   src={benefit.icon} alt={benefit.title} className="w-12 h-12 object-contain" />
-                </div>
-                <div>
-                    <h3 className="text-xl font-bold text-gray-900">{benefit.title}</h3>
-                <p className="text-gray-600 leading-relaxed mt-3">{benefit.description}</p>
-                </div>
-              </div>
-              
-            </div>
-          ))}
+  {benefits.map((benefit, index) => (
+    <div key={index} className="text-left">
+      <div className="flex gap-1 sm:gap-2 mb-4">
+        <img
+          src={benefit.icon}
+          alt={benefit.title}
+          className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
+        />
+        <div>
+          <h3 className="text-xl font-bold text-gray-900">{benefit.title}</h3>
+          <p className="text-gray-600 leading-relaxed mt-3">{benefit.description}</p>
         </div>
+      </div>
+    </div>
+  ))}
+</div>
+
       </div>
     </div>
         </div>

@@ -73,7 +73,7 @@ const SoftwareDevelopmentSection = () => {
     ];
 
     return (
-        <section className="w-full bg-white py-12 px-4 md:px-12">
+        <section className="w-full bg-white py-12 ">
             {/* Heading */}
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-gray-800">
                 Outsourced Software Development Workflow

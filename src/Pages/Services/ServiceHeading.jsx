@@ -33,7 +33,7 @@ const ServiceHeading = () => {
 
 
     return (
-        <div className="flex flex-col items-center justify-center w-full mt-[227px] max-h-[653px]">
+        <div className="flex flex-col items-center justify-center w-full mt-32 lg:mt-[227px] lg:max-h-[653px]">
             <section className="w-full">
                 {/* Title + Circle */}
                 <div className="w-full flex flex-col md:flex-row items-center ">
@@ -42,7 +42,7 @@ const ServiceHeading = () => {
                         <h2 className="text-center w-full max-w-[719px] p-0  text-2xl sm:text-3xl md:text-[72px] font-bold mb-4">
                             Software Development Outsourcing Services
                         </h2>
-                        <p className=" text-center text-black text-[24px] sm:text-base">
+                        <p className=" text-center text-black lg:text-[24px] sm:text-base">
                             Expand your capabilities by hiring our expert developers. We deliver top-notch software outsourcing
                             solutions tailored to your needs while saving your time and resources.
                         </p>
@@ -102,8 +102,8 @@ const ServiceHeading = () => {
                 </div>
 
                 {/* Services Section */}
-                <div className="mt-20">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-16">
+                <div className="mt-20 px-4 sm:px-6 md:px-8 lg:px-12">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-16 justify-items-center">
                         {[
                             {
                                 title: "Dedicated Team",
@@ -120,16 +120,19 @@ const ServiceHeading = () => {
                         ].map((service, idx) => (
                             <div
                                 key={idx}
-                                className="gap-3.5 w-[326px] h-[174px] bg-white p-[8px] border-l-2 border-red-500 flex flex-col justify-center"
+                                className="w-full sm:w-[90%] md:w-[326px] min-h-[174px] bg-white p-4 sm:p-5 md:p-[8px] border-l-2 border-red-500 flex flex-col justify-center"
                             >
-                                <h3 className="text-[24px] text-center font-bold text-[#141414] mb-2">{service.title}</h3>
-                                <p className="text-[16px] text-center text-[#141414] leading-[100%]">
+                                <h3 className="text-[20px] sm:text-[22px] md:text-[24px] text-center font-bold text-[#141414] mb-2">
+                                    {service.title}
+                                </h3>
+                                <p className="text-[14px] sm:text-[15px] md:text-[16px] text-center text-[#141414] leading-[1.4]">
                                     {service.desc}
                                 </p>
                             </div>
                         ))}
                     </div>
                 </div>
+
 
                 {/* Orbit Animation Style */}
                 <style jsx>{`

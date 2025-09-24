@@ -14,7 +14,7 @@ const ServicesMain = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Show loader for 1.5 seconds (simulate fetching data or just for effect)
+    // Show loader for 0.5 seconds (simulate fetching data or just for effect)
     const timer = setTimeout(() => {
       setLoading(false);
     }, 500);
@@ -34,7 +34,7 @@ const ServicesMain = () => {
         }`}
       >
         {/* Constrained section */}
-        <div className="w-full max-w-[1120px] flex flex-col items-center justify-center gap-y-12 md:px-0 mx-auto">
+        <div className="w-full max-w-[1120px] flex flex-col items-center justify-center gap-y-12 px-4 sm:px-6 md:px-8 lg:px-0 mx-auto">
           <ServiceHeading />
           <TrustedCompaniesSection />
         </div>
@@ -43,7 +43,7 @@ const ServicesMain = () => {
         <Founder />
 
         {/* Back to constrained layout */}
-        <div className="w-full max-w-[1120px] flex flex-col items-center justify-center gap-y-12 md:px-0 mx-auto">
+        <div className="w-full max-w-[1120px] flex flex-col items-center justify-center gap-y-12 px-4 sm:px-6 md:px-8 lg:px-0 mx-auto">
           <SoftwareServices />
           <OutsorcingSection />
           <SoftwareDevelopmentSection />

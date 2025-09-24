@@ -43,7 +43,7 @@ const TechnologySection = () => {
   return (
     <div className="w-full">
       <div className="w-full mx-auto">
-        <div className="p-8">
+        <div className="w-full">
           {/* Header */}
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -65,7 +65,7 @@ const TechnologySection = () => {
                 <h3 className="text-[40px] font-bold text-gray-900 mb-4">
                   {tech.title}
                 </h3>
-                <p className="text-gray-700 text-[20px]leading-relaxed mt-20 w-full h-[115px]">
+                <p className="text-gray-700 text-[20px]leading-relaxed lg:mt-20 w-full h-[115px]">
                   {tech.description}
                 </p>
               </div>

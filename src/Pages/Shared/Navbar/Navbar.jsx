@@ -26,10 +26,9 @@ const Navbar = () => {
   return (
     <header
       className={`transition-all duration-700 ease-in-out
-        ${
-          scrolled
-            ? "sticky top-0 left-0 right-0 bg-white shadow-lg backdrop-blur-md z-50"
-            : "absolute top-4 left-0 right-0 bg-transparent z-50"
+        ${scrolled
+          ? "sticky top-0 left-0 right-0 bg-white shadow-lg backdrop-blur-md z-50"
+          : "absolute top-4 left-0 right-0 bg-transparent z-50"
         }
       `}
     >
@@ -42,7 +41,7 @@ const Navbar = () => {
 
           {/* Hamburger */}
           <button
-            className="lg:hidden text-gray-800 focus:outline-none absolute left-0"
+            className="lg:hidden text-gray-800 focus:outline-none absolute left-2 md:left-20"
             onClick={() => setIsOpen(!isOpen)}
           >
             <svg
@@ -89,13 +88,12 @@ const Navbar = () => {
               <li key={path}>
                 <Link
                   to={path}
-                  className={`${baseLinkClass} ${
-                    isActive(path)
+                  className={`${baseLinkClass} ${isActive(path)
                       ? "text-orange-500"
                       : scrolled
-                      ? "text-black hover:text-orange-500"
-                      : "text-black hover:text-orange-500"
-                  }`}
+                        ? "text-black hover:text-orange-500"
+                        : "text-black hover:text-orange-500"
+                    }`}
                 >
                   {name}
                 </Link>
@@ -106,28 +104,44 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="text-black lg:hidden mt-2 bg-white shadow-lg rounded-lg p-4 space-y-4">
-            {[
-              { name: "Home", path: "/" },
-              { name: "Products", path: "/products" },
-              { name: "Projects", path: "/projects" },
-              { name: "Company", path: "/company" },
-              { name: "Contact", path: "/contact" },
-              { name: "Training", path: "/training" },
-            ].map(({ name, path }) => (
-              <Link
-                key={path}
-                to={path}
-                className={`${baseLinkClass} ${
-                  isActive(path) ? "text-orange-500" : "text-gray-600 hover:text-orange-500"
-                }`}
-                onClick={() => setIsOpen(false)} // close menu on link click
+          <div className="fixed inset-0 z-50 bg-white text-black flex flex-col p-6">
+            {/* Top bar with X button */}
+            <div className="flex items-center justify-between mb-6">
+              <button
+                onClick={() => setIsOpen(false)}
+                className="text-2xl text-gray-700 hover:text-orange-500"
               >
-                {name}
-              </Link>
-            ))}
+                ✕
+              </button>
+            </div>
+
+            {/* Menu links */}
+            <div className="flex flex-col space-y-6 text-lg">
+              {[
+                { name: "Home", path: "/" },
+                { name: "Services", path: "/services" },
+                { name: "Products", path: "/products" },
+                { name: "Projects", path: "/projects" },
+                { name: "Company", path: "/company" },
+                { name: "Contact", path: "/contact" },
+                { name: "Training", path: "/training" },
+              ].map(({ name, path }) => (
+                <Link
+                  key={path}
+                  to={path}
+                  className={`${baseLinkClass} ${isActive(path)
+                      ? "text-orange-500"
+                      : "text-gray-600 hover:text-orange-500"
+                    }`}
+                  onClick={() => setIsOpen(false)} // close menu on link click
+                >
+                  {name}
+                </Link>
+              ))}
+            </div>
           </div>
         )}
+
       </div>
     </header>
   );

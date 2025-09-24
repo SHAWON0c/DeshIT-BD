@@ -37,8 +37,8 @@ const TestimonialSection = () => {
   }, []);
 
   return (
-    <section className="w-full bg-white py-12 px-4 md:px-8">
-      <div className="max-w-4xl mx-auto text-center">
+    <section className="w-full bg-white py-12 ">
+      <div className="w-full mx-auto text-center">
         {/* Heading */}
         <h2 className="text-xl md:text-2xl font-bold mb-2">Clients Testimonials</h2>
         <p className="text-gray-600 text-sm md:text-base mb-8">

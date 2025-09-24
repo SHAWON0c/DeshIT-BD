@@ -8,20 +8,20 @@ import vivo from '../../assets/Images/Companies/img-5.png';
 const TrustedCompaniesSection = () => {
     return (
         <div className="w-full">
-            <div className="w-full h-[122px] bg-white  px-4 sm:px-8 py-2 flex flex-col justify-start">
-                
+            <div className="w-full bg-white py-2 sm:py-4 flex flex-col justify-start">
+
                 {/* Top Text */}
-                <h4 className="text-center text-black font-bold text-sm sm:text-base leading-none mb-8">
+                <h4 className="text-center text-black font-bold text-xs sm:text-sm md:text-base lg:text-lg leading-tight mb-4 sm:mb-6 md:mb-8">
                     Trusted By 100+ Companies including
                 </h4>
 
                 {/* Logos */}
-                <div className="flex items-center justify-center gap-4 sm:gap-6 flex-wrap overflow-hidden">
-                    <img className="h-[40px] sm:h-[50px] object-contain" src={undp} alt="UNDP" />
-                    <img className="h-[40px] sm:h-[50px] object-contain" src={ict} alt="ICT" />
-                    <img className="h-[40px] sm:h-[50px] object-contain" src={telenor} alt="Telenor" />
-                    <img className="h-[40px] sm:h-[50px] object-contain" src={nokia} alt="Nokia" />
-                    <img className="h-[40px] sm:h-[50px] object-contain" src={vivo} alt="Vivo" />
+                <div className="flex items-center justify-around gap-2 sm:gap-2 md:gap-6 lg:gap-8 flex-wrap overflow-hidden">
+                    <img className="h-3 sm:h-8 md:h-10 lg:h-[40px] object-contain" src={undp} alt="UNDP" />
+                    <img className="h-3 sm:h-8 md:h-10 lg:h-[40px] object-contain" src={ict} alt="ICT" />
+                    <img className="h-3 sm:h-8 md:h-10 lg:h-[40px]object-contain" src={telenor} alt="Telenor" />
+                    <img className="h-3 sm:h-8 md:h-10 lg:h-[40px] object-contain" src={nokia} alt="Nokia" />
+                    <img className="h-3 sm:h-8 md:h-10 lg:h-[40px] object-contain" src={vivo} alt="Vivo" />
                 </div>
             </div>
         </div>
