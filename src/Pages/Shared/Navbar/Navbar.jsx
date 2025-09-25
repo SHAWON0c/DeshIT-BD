@@ -32,7 +32,7 @@ const Navbar = () => {
         }
       `}
     >
-      <div className="container mx-auto px-4">
+      <div className="max-w-screen-xl mx-auto px-4 llg:px-0">
         <nav className="flex items-center justify-between py-4 relative">
           {/* Desktop Logo */}
           <div className="hidden lg:flex items-center">

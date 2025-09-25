@@ -123,6 +123,17 @@ body {
   
 }
 
+/* app.css */
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* app.css */
+.button-bottom-shadow {
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
 
 
 @layer base {
@@ -593,4 +604,72 @@ body {
   }
 }
 
+
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Utility classes to trigger animations */
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease forwards;
+}
+
+
+
+
+/* .letter-appear {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeSlideUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
+
+.letter-appear {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(10px);
+  will-change: opacity, transform;
+}
+
+.letter-appear.visible {
+  animation: fadeSlideUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 

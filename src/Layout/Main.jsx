@@ -7,12 +7,14 @@ import Footer from '../Pages/Shared/Footer/Footer';
 
 const Main = () => {
   return (
-    <div className="relative">
-        <Navbar />
-        <Banner />
-        <Outlet />
-        <Footer />
-      </div>
+    <div className="relative ">
+      <Navbar />
+      <Banner />
+
+      <Outlet />
+
+      <Footer />
+    </div>
 
   );
 };

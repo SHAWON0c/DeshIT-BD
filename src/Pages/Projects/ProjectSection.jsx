@@ -57,7 +57,7 @@ const ProjectSection = () => {
 
       {/* Project cards grid */}
       <div
-        className={`mt-10 mb-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 w-full max-w-[1200px] mx-auto transition-opacity duration-500 ${
+        className={`mt-10 mb-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 px-4 md:px-4 lg:px-2 w-full max-w-[1200px] mx-auto transition-opacity duration-500 ${
           loading ? "opacity-0 pointer-events-none" : "opacity-100"
         }`}
       >

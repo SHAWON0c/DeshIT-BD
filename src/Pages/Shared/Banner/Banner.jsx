@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import pageMeta from "../../../Constant/pageMeta";
+import SmoothLetterFade from '../../../Components/TypingEffect/SmoothLetterFade';
 
 const Banner = () => {
     const location = useLocation();
@@ -29,6 +30,10 @@ const Banner = () => {
     else if (path.includes("/training")) {
         pageKey = "training";
     }
+
+    else if (path.includes("/company")) {
+        pageKey = "company";
+    }
     // Add more conditions as needed
     // else if (path.includes("/about")) {
     //     pageKey = "about";
@@ -41,7 +46,13 @@ const Banner = () => {
             <section className="page-banner pt-20">
                 <div className="container">
                     <div className="page-title-wrapper">
-                        <h1 className="gradual-text page-title dir-right">{title}</h1>
+                        <SmoothLetterFade
+                        
+                        text={title} 
+                        delay={0.1}
+                        key={`${path}-${title}`}
+                        tag="h1"
+                        className="gradual-text page-title dir-right"></SmoothLetterFade>
 
                         <ul className="bradcurmed">
                             {breadcrumbs.map((crumb, index) => (

@@ -39,7 +39,7 @@ const TrainingSection = () => {
 
       {/* Cards grid */}
       <div
-        className={`mt-2 mb-28 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 w-full max-w-[1200px] mx-auto transition-opacity duration-500 ${
+        className={`mt-8 mb-28 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 w-full max-w-[1200px] mx-auto transition-opacity duration-500 ${
           loading ? "opacity-0 pointer-events-none" : "opacity-100"
         }`}
       >

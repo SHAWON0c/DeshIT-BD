@@ -45,7 +45,7 @@ const ProductCard = () => {
 
       {/* Product grid, fade in/out with loading */}
       <div
-        className={`mt-16 mb-32 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-20 w-full max-w-[1200px] mx-auto transition-opacity duration-500 ${
+        className={`mt-16 mb-32 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-20 w-full px-4 md:px-4 lg:px-2 max-w-[1200px] mx-auto transition-opacity duration-500 ${
           loading ? "opacity-0 pointer-events-none" : "opacity-100"
         }`}
       >

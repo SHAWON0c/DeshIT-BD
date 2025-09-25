@@ -25,6 +25,13 @@ const pageMeta = {
             { label: "Training" }
         ]
     },
+     company: {
+        title: "Company",
+        breadcrumbs: [
+            { label: "Home", href: "/" },
+            { label: "Company" }
+        ]
+    },
     // Add more routes as needed
 };
 
