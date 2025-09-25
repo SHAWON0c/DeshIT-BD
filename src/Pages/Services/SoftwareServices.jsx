@@ -1,7 +1,7 @@
 import React from "react";
 
 
-import img1 from "../../assets/Images/Icons/DevelopmentSection/vector1.png";
+import img1 from "../../assets/Images/Icons/DevelopmentSection/vector2.png";
 import img2 from "../../assets/Images/Icons/DevelopmentSection/vector2.png";
 import img3 from "../../assets/Images/Icons/DevelopmentSection/vector3.png";
 import img4 from "../../assets/Images/Icons/DevelopmentSection/vector4.png";
