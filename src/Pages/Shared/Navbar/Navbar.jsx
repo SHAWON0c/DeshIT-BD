@@ -20,19 +20,15 @@ const Navbar = () => {
   // Function to check if link is active
   const isActive = (path) => location.pathname === path;
 
-  // Base classes for all links
   const baseLinkClass = "block transition-colors duration-500 ease-in-out";
 
   return (
     <header
-      className={`transition-all duration-700 ease-in-out
-        ${scrolled
-          ? "sticky top-0 left-0 right-0 bg-white shadow-lg backdrop-blur-md z-50"
-          : "absolute top-4 left-0 right-0 bg-transparent z-50"
-        }
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors transition-shadow duration-500 ease-in-out
+        ${scrolled ? "bg-white shadow-lg backdrop-blur-md" : "bg-transparent"}
       `}
     >
-      <div className="max-w-screen-xl mx-auto px-4 llg:px-0">
+      <div className="max-w-screen-xl mx-auto px-4 mt-5 not-odd:llg:px-0">
         <nav className="flex items-center justify-between py-4 relative">
           {/* Desktop Logo */}
           <div className="hidden lg:flex items-center">
@@ -88,12 +84,11 @@ const Navbar = () => {
               <li key={path}>
                 <Link
                   to={path}
-                  className={`${baseLinkClass} ${isActive(path)
+                  className={`${baseLinkClass} ${
+                    isActive(path)
                       ? "text-orange-500"
-                      : scrolled
-                        ? "text-black hover:text-orange-500"
-                        : "text-black hover:text-orange-500"
-                    }`}
+                      : "text-black hover:text-orange-500"
+                  }`}
                 >
                   {name}
                 </Link>
@@ -129,11 +124,12 @@ const Navbar = () => {
                 <Link
                   key={path}
                   to={path}
-                  className={`${baseLinkClass} ${isActive(path)
+                  className={`${baseLinkClass} ${
+                    isActive(path)
                       ? "text-orange-500"
                       : "text-gray-600 hover:text-orange-500"
-                    }`}
-                  onClick={() => setIsOpen(false)} // close menu on link click
+                  }`}
+                  onClick={() => setIsOpen(false)}
                 >
                   {name}
                 </Link>
@@ -141,7 +137,6 @@ const Navbar = () => {
             </div>
           </div>
         )}
-
       </div>
     </header>
   );

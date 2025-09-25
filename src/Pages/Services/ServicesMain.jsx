@@ -33,7 +33,7 @@ const ServicesMain = () => {
       >
         {/* Constrained section */}
     <div className="px-2 md:px-2 lg:px-0">
-          <div className="w-full max-w-[1120px] flex flex-col items-center justify-center gap-y-12 px-10 lg:px-0 mx-auto">
+          <div className="w-full max-w-7xl flex flex-col items-center justify-center gap-y-12 px-10 lg:px-0 mx-auto">
           <ServiceHeading />
           <TrustedCompaniesSection />
         </div>
@@ -46,7 +46,7 @@ const ServicesMain = () => {
 
         {/* Back to constrained layout */}
         <div className="px-2 md:px-2 lg:px-0">
-          <div className="w-full max-w-[1120px] flex flex-col items-center justify-center gap-y-12 px-4 lg:px-0 mx-auto">
+          <div className="w-full max-w-7xl flex flex-col items-center justify-center gap-y-12 px-4 lg:px-0 mx-auto">
           <SoftwareServices />
           <OutsorcingSection />
           <SoftwareDevelopmentSection />

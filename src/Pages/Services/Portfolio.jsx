@@ -2,10 +2,17 @@ import React from 'react';
 import img1 from '../../assets/Images/Portfolio/img1.jpg';
 import img2 from '../../assets/Images/Portfolio/img2.jpg';
 import img3 from '../../assets/Images/Portfolio/img3.jpg';
+import SlideInSection from '../../Components/Slider/SlideInSection';
 
 const Portfolio = () => {
+  const images = [
+    { src: img1, alt: "Green fern leaves project" },
+    { src: img2, alt: "Mountain coastal city view project" },
+    { src: img3, alt: "Crystal ball forest reflection project" },
+  ];
+
   return (
-    <section className="py-16 ">
+    <section className="py-16">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
@@ -14,32 +21,20 @@ const Portfolio = () => {
 
         {/* Portfolio Images Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center mb-12">
-          {/* Image 1 */}
-          <div className="w-[357px] h-[380px] overflow-hidden">
-            <img
-              src={img1}
-              alt="Green fern leaves project"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Image 2 */}
-          <div className="w-[357px] h-[380px] overflow-hidden">
-            <img
-              src={img2}
-              alt="Mountain coastal city view project"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Image 3 */}
-          <div className="w-[357px] h-[380px] overflow-hidden">
-            <img
-              src={img3}
-              alt="Crystal ball forest reflection project"
-              className="w-full h-full object-cover"
-            />
-          </div>
+          {images.map((image, index) => (
+            <SlideInSection
+              key={index}
+              direction={index % 2 === 0 ? "left" : "right"} // Alternate direction
+            >
+              <div className="w-[357px] h-[380px] overflow-hidden">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </SlideInSection>
+          ))}
         </div>
 
         {/* Call to Action Button */}

@@ -1,4 +1,6 @@
 import React from 'react';
+import SmoothLetterFade from '../../Components/TypingEffect/SmoothLetterFade';
+import FadeInSection from '../../Components/FadeInSection';
 
 const technologies = [
   {
@@ -46,9 +48,16 @@ const TechnologySection = () => {
         <div className="w-full">
           {/* Header */}
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            {/* <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Our Advanced Development Technology
-            </h2>
+            </h2> */}
+
+            <SmoothLetterFade
+              text="Our Advanced Development Technology"
+              delay={0.05}
+              tag="h2"
+             className="text-2xl font-bold text-gray-900 mb-4"
+            />
             <p className="text-gray-700 mx-auto">
               Our advanced development technologies, including AI, machine learning, blockchain, and microservices, enable
               us to deliver innovative, future-proof solutions with exceptional efficiency and scalability.
@@ -58,6 +67,11 @@ const TechnologySection = () => {
           {/* Technology Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[80px] mt-20">
             {technologies.map((tech, index) => (
+
+               <FadeInSection
+              key={index}
+              delay={index * 0.1}
+            >
               <div
                 key={index}
                 className="w-full max-w-[496px] h-full max-h-[242px]"
@@ -69,6 +83,7 @@ const TechnologySection = () => {
                   {tech.description}
                 </p>
               </div>
+              </FadeInSection>
             ))}
           </div>
         </div>

@@ -14,6 +14,8 @@ import {
     Download,
     Zap,
 } from "lucide-react";
+import SmoothLetterFade from "../../Components/TypingEffect/SmoothLetterFade";
+import SlideInSection from "../../Components/Slider/SlideInSection";
 
 // Circle step component without label
 const WorkflowCircle = ({ Icon }) => (
@@ -75,9 +77,16 @@ const SoftwareDevelopmentSection = () => {
     return (
         <section className="w-full bg-white py-12 ">
             {/* Heading */}
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-gray-800">
+            {/* <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-gray-800">
                 Outsourced Software Development Workflow
-            </h2>
+            </h2> */}
+
+            <SmoothLetterFade
+                text="Outsourced Software Development Workflow"
+                delay={0.0}         // small stagger for letters
+                tag="h2"             // renders as <h2>
+                className="text-2xl md:text-3xl font-bold text-center mb-4 text-gray-800"
+            />
             <p className="text-center text-gray-600 mb-12 w-full mx-auto text-sm md:text-base">
                 Our Strategic Development Plan streamlines project execution, enhances
                 collaboration, and ensures timely delivery with flexible scaling, all
@@ -85,6 +94,8 @@ const SoftwareDevelopmentSection = () => {
             </p>
 
             {/* Desktop Layout */}
+
+            <SlideInSection direction="left">
             <div className=" max-w-[830px] mx-auto  relative hidden md:flex flex-col items-center gap-8">
                 {/* Top Row */}
                 <div className=" relative w-full flex flex-col items-center">
@@ -101,8 +112,8 @@ const SoftwareDevelopmentSection = () => {
                     {/* Vertical Connector + Center Icon */}
                     <div
                         className="absolute flex flex-col items-center  mt-8 right-0 "
-        
-                        >
+
+                    >
                         <div className="w-0.5 h-10 bg-yellow-400" />
                         <WorkflowCircle Icon={centerIcon} />
                         <div className="w-0.5 h-10 bg-yellow-400" />
@@ -125,8 +136,8 @@ const SoftwareDevelopmentSection = () => {
                 {/* Vertical Connector */}
                 <div className=" absolute flex flex-col items-center top-44 left-0">
                     <div className="w-0.5 h-9 bg-yellow-400" />
-                        <WorkflowCircle Icon={centerIcon} />
-                        <div className="w-0.5 h-9 bg-yellow-400" />
+                    <WorkflowCircle Icon={centerIcon} />
+                    <div className="w-0.5 h-9 bg-yellow-400" />
                 </div>
 
                 {/* Bottom Row */}
@@ -140,6 +151,7 @@ const SoftwareDevelopmentSection = () => {
                     ))}
                 </div>
             </div>
+            </SlideInSection>
 
             {/* Mobile Layout */}
             <div className="md:hidden flex flex-col items-center">

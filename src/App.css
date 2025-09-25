@@ -629,13 +629,25 @@ body {
 }
 
 /* Utility classes to trigger animations */
-.animate-slide-in-left {
+/* .animate-slide-in-left {
   animation: slideInLeft 0.8s ease forwards;
 }
 
 .animate-slide-in-right {
   animation: slideInRight 0.8s ease forwards;
+} */
+
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease forwards;
+  animation-delay: 0.5s; /* delay of 1 second */
 }
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease forwards;
+  animation-delay: 0.5s; /* delay of 1 second */
+}
+
 
 
 

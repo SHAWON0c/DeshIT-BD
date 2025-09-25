@@ -1,10 +1,24 @@
-import { Phone, Mail, Facebook, Linkedin, FolderPen } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import img from '../../assets/Images/Contact/img.png';
-import TypingEffect from "../../Components/TypingEffect/TypingEffect";
 import SmoothLetterFade from "../../Components/TypingEffect/SmoothLetterFade";
+import GlobalSpinner from "../../Components/Spinner/GlobalSpinner"; // ✅ loader
+import React, { useEffect, useState } from "react";
+
 export default function ContactPage() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loaderTimer = setTimeout(() => {
+      setLoading(false);
+    }, 500); // adjust duration as needed
+    return () => clearTimeout(loaderTimer);
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#FDF8F8] relative overflow-hidden">
+      {/* Loader */}
+      <GlobalSpinner visible={loading} />
+
       {/* Background Animated Dots */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* logo bottom right side */}
@@ -19,28 +33,24 @@ export default function ContactPage() {
 
         {/* logo bottom side */}
         <div
-          className="absolute  w-10 h-10 bg-[#F588771C] rounded-full "
-          style={{
-            animation: "slideIn45 1s ease-out forwards"
-          }}
+          className="absolute w-10 h-10 bg-[#F588771C] rounded-full"
+          style={{ animation: "slideIn45 1s ease-out forwards" }}
         />
 
         <div
-          className="absolute top-80 right-3/8 w-10 h-10 bg-[#F588771C] rounded-full "
-          style={{
-            animation: "wiggleDiagonal 1.5s ease-in-out infinite",
-          }}
+          className="absolute top-80 right-3/8 w-10 h-10 bg-[#F588771C] rounded-full"
+          style={{ animation: "wiggleDiagonal 1.5s ease-in-out infinite" }}
         ></div>
 
         {/* left */}
         <div
-          className="absolute top-20 left-52 w-20 h-20 bg-[#F588771C] rounded-full  animate-pulse"
+          className="absolute top-20 left-52 w-20 h-20 bg-[#F588771C] rounded-full animate-pulse"
           style={{ animationDelay: "2s" }}
         ></div>
 
-        {/* logo up side  */}
+        {/* logo up side */}
         <div
-          className="absolute top-44 left-4/7 w-18 h-18 bg-[#F588771C] rounded-full "
+          className="absolute top-44 left-4/7 bg-[#F588771C] rounded-full"
           style={{
             width: "80px",
             height: "80px",
@@ -50,25 +60,25 @@ export default function ContactPage() {
 
         {/* top */}
         <div
-          className="absolute -top-52 right-64 w-64 h-64 bg-[#F588771C] rounded-full "
+          className="absolute -top-52 right-64 w-64 h-64 bg-[#F588771C] rounded-full"
           style={{ animationDelay: "3.5s" }}
         ></div>
       </div>
 
       {/* Contact Intro */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      <section
+        className={`py-16 px-4 sm:px-6 lg:px-8 relative z-10 transition-opacity duration-500 ${
+          loading ? "opacity-0 pointer-events-none" : "opacity-100"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center mt-10 lg:mt-0">
           {/* Text container */}
           <div className="animate-slide-in-left flex flex-col justify-center w-full h-full items-center text-center lg:items-start lg:text-left">
-            <SmoothLetterFade 
-            text="Get in touch with Us"
-
-            tag="h1" 
-             // lower = faster (good range: 20–60 for smoothness)
-
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-800 mb-6 leading-tight">
-              {/* Get in touch with Us */}
-            </SmoothLetterFade>
+            <SmoothLetterFade
+              text="Get in touch with Us"
+              tag="h1"
+              className="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-800 mb-6 leading-tight"
+            />
             <p className="text-gray-600 text-base sm:text-lg md:text-lg leading-relaxed max-w-xl">
               Why I say old chap that is spiffing, young delinquent in my flat bloke buggered what a plonker.
             </p>
@@ -86,10 +96,14 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form + Info */}
-      <section className="py-16 px-4 sm:px-10 bg-white relative z-10">
+      <section
+        className={`py-16 px-4 sm:px-10 bg-white relative z-10 transition-opacity duration-500 ${
+          loading ? "opacity-0 pointer-events-none" : "opacity-100"
+        }`}
+      >
         <div className="w-full mx-auto grid lg:grid-cols-2 gap-16">
           {/* Contact Info */}
-          <div className="animate-slide-in-left space-y-8 font-poppins lg:ml-72">
+          <div className=" w-[400px]animate-slide-in-left space-y-8 font-poppins ml-2 sm:ml-4 md:ml-8 lg:ml-72">
             <div>
               <h3 className="text-[20px] font-semibold text-gray-900 mb-4">Our Location</h3>
               <p className="text-gray-600 text-2xl">
@@ -116,10 +130,20 @@ export default function ContactPage() {
           <div>
             <form className="space-y-6 animate-slide-in-right">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input placeholder="Name" className="w-full p-4 border bg-[#FDF8F8] border-gray-300 rounded-3xl" />
-                <input placeholder="Email" type="email" className="w-full p-3 bg-[#FDF8F8] border border-gray-300 rounded-3xl" />
+                <input
+                  placeholder="Name"
+                  className="w-full p-4 border bg-[#FDF8F8] border-gray-300 rounded-3xl"
+                />
+                <input
+                  placeholder="Email"
+                  type="email"
+                  className="w-full p-3 bg-[#FDF8F8] border border-gray-300 rounded-3xl"
+                />
               </div>
-              <input placeholder="Subject" className="w-full p-4 border bg-[#FDF8F8] border-gray-300 rounded-3xl" />
+              <input
+                placeholder="Subject"
+                className="w-full p-4 border bg-[#FDF8F8] border-gray-300 rounded-3xl"
+              />
               <textarea
                 placeholder="Your Comment"
                 rows={6}

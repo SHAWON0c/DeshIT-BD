@@ -1,13 +1,13 @@
 // TestimonialSection.jsx
 import React, { useState, useEffect } from "react";
-
+import img1 from '../../assets/Images/Author/client.png'
 const testimonials = [
   {
     text: "Everything went extremely well. My project was fairly complex and required Nascenia to investigate new technologies/APIs. They succeeded with flying colors and I can’t wait to get started on another project. I was very impressed with their communication and willingness to move directions slightly. The code produced was excellent. Fantastic team!",
     name: "Patrick Stockwell",
     role: "Founder, Volta Inc. San Francisco Bay Area, USA",
     project: "Project: Baller ID",
-    image: "https://i.pravatar.cc/100?img=1", // replace with real image
+    image:img1, // replace with real image
   },
   {
     text: "The team exceeded our expectations. They delivered on time and provided continuous updates throughout the development cycle. Their expertise helped us overcome challenges smoothly.",
@@ -89,9 +89,8 @@ const TestimonialSection = () => {
             <button
               key={idx}
               onClick={() => setCurrent(idx)}
-              className={`w-3 h-3 rounded-full ${
-                current === idx ? "bg-orange-500" : "bg-gray-300"
-              }`}
+              className={`w-3 h-3 rounded-full ${current === idx ? "bg-orange-500" : "bg-gray-300"
+                }`}
             />
           ))}
         </div>
