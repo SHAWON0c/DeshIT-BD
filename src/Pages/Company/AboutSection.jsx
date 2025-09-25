@@ -25,7 +25,7 @@ export default function AboutSection() {
           loading ? "opacity-0 pointer-events-none" : "opacity-100"
         }`}
       >
-        <div className="max-w-7xl px-6 mx-auto">
+        <div className="max-w-7xl px-6 lg:px-0 mx-auto">
           {/* DeshITBD & Simplifying Text */}
           <div className="w-full space-y-6">
             <SlideInSection direction="left">
@@ -47,7 +47,7 @@ export default function AboutSection() {
           {/* Paragraph and Image */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 mt-10">
             <SlideInSection direction="left">
-              <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed w-full md:w-auto lg:w-[1051px] ">
+              <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed w-full md:w-auto lg:w-[950px] ">
                 We, DeshITbd is a mobile application development startup in
                 Bangladesh. We can develop apps from sketch to workable apps and
                 bring them to the marketplace like Google Play. We have a
@@ -92,7 +92,7 @@ export default function AboutSection() {
           <div className="flex flex-col lg:flex-row items-start justify-between gap-8 mt-10">
             {/* Mission Text */}
             <SlideInSection direction="left">
-              <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed w-full md:w-auto lg:w-[1051px] ">
+              <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed w-full md:w-auto lg:w-[950px] ">
                 Our mission is to transform ideas into digital products and enable
                 organizations to leverage technology for betterment. Our priority
                 is to deliver impactful digital solutions with superior user
@@ -127,7 +127,7 @@ export default function AboutSection() {
             How we work
           </h2>
 
-          <p className=" text-lg lg:text-2xl text-white leading-relaxed text-base mb-8">
+          <p className=" lg:text-2xl text-white leading-relaxed text-base mb-8">
             We believe in agile development. We manage our projects by following
             Scrum, the most popular widely practiced agile approach. Delivering
             working applications on budget, and on time is always our concern
