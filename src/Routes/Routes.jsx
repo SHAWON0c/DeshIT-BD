@@ -9,6 +9,8 @@ import ServicesMain from "../Pages/Services/ServicesMain";
 import ProjectSection from "../Pages/Projects/ProjectSection";
 import TrainingSection from "../Pages/Training/TrainingSection";
 import ProductCard from "../Pages/ProdcutCard/ProductCard";
+import AboutSection from "../Pages/Company/AboutSection";
+import ContactPage from "../Pages/Contact/ContactPage";
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +32,14 @@ export const router = createBrowserRouter([
       {
         path:'projects',
         element:<ProjectSection></ProjectSection>
+      },
+      {
+        path:'company',
+        element:<AboutSection></AboutSection>
+      },
+      {
+        path:'contact',
+        element:<ContactPage></ContactPage>
       },
       {
         path:'training',

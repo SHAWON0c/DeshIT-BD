@@ -30,7 +30,7 @@ const ConnectorH = () => (
 );
 
 const ConnectorH2 = () => (
-    <div className="hidden md:block w-16 h-0.5 bg-yellow-400"></div>
+    <div className="hidden md:block w-8 h-0.5 bg-yellow-400"></div>
 );
 
 const ConnectorH3 = () => (
@@ -51,7 +51,7 @@ const Connectorleft2 = () => (
 );
 
 const Connectorright = () => (
-    <div className="hidden md:block w-16 h-0.5 bg-yellow-400"></div>
+    <div className="hidden md:block w-24 h-0.5 bg-yellow-400"></div>
 );
 // Vertical connector (mobile only)
 const ConnectorV = () => (
@@ -85,9 +85,9 @@ const SoftwareDevelopmentSection = () => {
             </p>
 
             {/* Desktop Layout */}
-            <div className="  relative hidden md:flex flex-col items-center gap-8">
+            <div className=" max-w-[830px] mx-auto  relative hidden md:flex flex-col items-center gap-8">
                 {/* Top Row */}
-                <div className="relative w-full flex flex-col items-center">
+                <div className=" relative w-full flex flex-col items-center">
                     <div className="flex items-center">
                         {topRow.map((Icon, i) => (
                             <React.Fragment key={i}>
@@ -100,7 +100,9 @@ const SoftwareDevelopmentSection = () => {
 
                     {/* Vertical Connector + Center Icon */}
                     <div
-                        className="absolute flex flex-col items-center ml-[800px] mt-8">
+                        className="absolute flex flex-col items-center  mt-8 right-0 "
+        
+                        >
                         <div className="w-0.5 h-10 bg-yellow-400" />
                         <WorkflowCircle Icon={centerIcon} />
                         <div className="w-0.5 h-10 bg-yellow-400" />
@@ -108,7 +110,7 @@ const SoftwareDevelopmentSection = () => {
                 </div>
 
                 {/* Middle Row (reversed) */}
-                <div className="flex items-center md:mt-12">
+                <div className=" max-w-3xl flex items-center md:mt-12">
                     <Connectorleft />
                     {[...middleRow].reverse().map((Icon, i) => (
                         <React.Fragment key={i}>
@@ -121,14 +123,14 @@ const SoftwareDevelopmentSection = () => {
                 </div>
 
                 {/* Vertical Connector */}
-                <div className=" absolute flex flex-col items-center top-44 mr-[800px]">
+                <div className=" absolute flex flex-col items-center top-44 left-0">
                     <div className="w-0.5 h-9 bg-yellow-400" />
                         <WorkflowCircle Icon={centerIcon} />
                         <div className="w-0.5 h-9 bg-yellow-400" />
                 </div>
 
                 {/* Bottom Row */}
-                <div className="flex items-center mt-10">
+                <div className=" max-w-3xl flex items-center mt-10">
                     <Connectorleft2></Connectorleft2>
                     {bottomRow.map((Icon, i) => (
                         <React.Fragment key={i}>

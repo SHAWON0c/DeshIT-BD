@@ -47,15 +47,16 @@
 }
 
 .animate-ball .ball:nth-child(5) {
-  height: 200px;
-  width: 200px;
-  top: -25%;
+  height: 400px !important;
+  width: 100px;
+  top: -35%;
   right: 100px;
   background: linear-gradient(135deg, #a8edea, #fed6e3);
   opacity: 0.3;
   -webkit-animation: wave 3s 0.1s infinite linear;
   animation: wave 3s 0.1s infinite linear;
 }
+
 
 /* Adding keyframe animations for the balls */
 @keyframes zoommd {

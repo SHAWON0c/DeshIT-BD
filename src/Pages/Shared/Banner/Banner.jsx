@@ -10,6 +10,11 @@ const Banner = () => {
     if (path === "/services") {
         return null;
     }
+    if (path === "/contact") {
+        return null;
+    }
+
+
 
     // ✅ Set page key based on path
     let pageKey = "home"; // default to home
