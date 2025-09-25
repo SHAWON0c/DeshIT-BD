@@ -271,7 +271,7 @@ body {
 }
 .circle {
   position: absolute;
-  left: -270px; /* Move 150px to the left */
+  left: -338px; /* Move 150px to the left */
   top:-150px;
   z-index: 0;
 }

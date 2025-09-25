@@ -71,8 +71,8 @@ const Banner = () => {
                 </div>
 
                 <svg
-                    className="circle"
-                    data-parallax='{"x" : -200}'
+                    className="circle "
+                    data-parallax='{"x" : -300}'
                     xmlns="http://www.w3.org/2000/svg"
                     width="950px"
                     height="950px"
