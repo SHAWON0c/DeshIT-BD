@@ -7,8 +7,8 @@ const Banner = () => {
     const location = useLocation();
     const path = location.pathname;
 
-    // ❌ Don't render banner on services page
-    if (path === "/services") {
+    // ❌ Don't render banner on pages with custom hero sections
+    if (path === "/" || path === "/services") {
         return null;
     }
     if (path === "/contact") {

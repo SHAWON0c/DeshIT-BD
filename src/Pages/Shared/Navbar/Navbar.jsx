@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../../../assets/logo/deshit-logo.png";
+import logo from "../../../assets/logo/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,20 +19,26 @@ const Navbar = () => {
 
   // Function to check if link is active
   const isActive = (path) => location.pathname === path;
+  const solidHeader =
+    scrolled || location.pathname === "/" || location.pathname === "/services";
 
   const baseLinkClass = "block transition-colors duration-500 ease-in-out";
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-colors transition-shadow duration-500 ease-in-out
-        ${scrolled ? "bg-white shadow-lg backdrop-blur-md" : "bg-transparent"}
+        ${
+          solidHeader
+            ? "bg-white/95 shadow-sm backdrop-blur-md border-b border-gray-100"
+            : "bg-transparent"
+        }
       `}
     >
-      <div className="max-w-screen-xl mx-auto px-4 mt-5 not-odd:llg:px-0">
+      <div className="max-w-screen-xl mx-auto px-4 lg:px-0">
         <nav className="flex items-center justify-between py-4 relative">
           {/* Desktop Logo */}
           <div className="hidden lg:flex items-center">
-            <img className="w-[153px] h-[32px]" src={logo} alt="DeshIT" />
+            <img className="h-[36px] w-auto" src={logo} alt="Ondrobit" />
           </div>
 
           {/* Hamburger */}
@@ -67,7 +73,7 @@ const Navbar = () => {
 
           {/* Mobile Logo */}
           <div className="flex-1 flex justify-center lg:hidden">
-            <img className="w-[153px] h-[32px]" src={logo} alt="DeshIT" />
+            <img className="h-[36px] w-auto" src={logo} alt="Ondrobit" />
           </div>
 
           {/* Desktop Menu */}
