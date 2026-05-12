@@ -24,6 +24,9 @@ import FadeInSection from "../../Components/FadeInSection";
 import SlideInSection from "../../Components/Slider/SlideInSection";
 import SmoothLetterFade from "../../Components/TypingEffect/SmoothLetterFade";
 import GlobalSpinner from "../../Components/Spinner/GlobalSpinner";
+import Button from "../../Components/UI/Button";
+import IconBadge from "../../Components/UI/IconBadge";
+import SurfaceCard from "../../Components/UI/SurfaceCard";
 
 const serviceGroups = [
   {
@@ -204,19 +207,21 @@ const ServicesMain = () => {
                     software.
                   </p>
                   <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                    <Link
+                    <Button
+                      as={Link}
                       to="/contact"
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#EB2127] px-6 py-3 font-medium text-white shadow-md transition-colors hover:bg-[#C81016]"
+                      variant="primary"
                     >
                       Discuss service scope
                       <ArrowRight className="h-5 w-5" />
-                    </Link>
-                    <a
+                    </Button>
+                    <Button
+                      as="a"
                       href="#catalog"
-                      className="inline-flex items-center justify-center rounded-lg border border-white/20 px-6 py-3 font-medium text-white transition-colors hover:bg-white/10"
+                      variant="darkOutline"
                     >
                       Browse catalog
-                    </a>
+                    </Button>
                   </div>
                 </div>
               </SlideInSection>
@@ -271,7 +276,10 @@ const ServicesMain = () => {
                             }}
                           >
                             <div className="hero-hex-node-content flex flex-col items-center justify-center">
-                              <Icon className="h-6 w-6 text-[#EB2127] md:h-7 md:w-7" />
+                              {React.createElement(Icon, {
+                                className:
+                                  "h-6 w-6 text-[#EB2127] md:h-7 md:w-7",
+                              })}
                               <span className="mt-1 text-[11px] font-bold md:text-xs">
                                 {label}
                               </span>
@@ -361,14 +369,13 @@ const ServicesMain = () => {
               {serviceGroups.map(
                 ({ id, title, Icon, summary, deliverables, stack }, index) => (
                   <FadeInSection key={title} delay={index * 0.06}>
-                    <article
+                    <SurfaceCard
+                      as="article"
                       id={id}
                       className="grid lg:grid-cols-[0.75fr_1.25fr] gap-6 rounded-lg bg-white p-6 md:p-8 shadow-sm scroll-mt-32"
                     >
                       <div>
-                        <div className="h-14 w-14 rounded-lg bg-[#EB2127]/10 flex items-center justify-center">
-                          <Icon className="h-7 w-7 text-[#EB2127]" />
-                        </div>
+                        <IconBadge Icon={Icon} size="lg" />
                         <h3 className="mt-5 text-2xl font-bold text-[#1a365d]">
                           {title}
                         </h3>
@@ -408,7 +415,7 @@ const ServicesMain = () => {
                           </div>
                         </div>
                       </div>
-                    </article>
+                    </SurfaceCard>
                   </FadeInSection>
                 )
               )}
@@ -437,7 +444,10 @@ const ServicesMain = () => {
               <div className="grid gap-4">
                 {tracks.map((track, index) => (
                   <FadeInSection key={track.title} delay={index * 0.1}>
-                    <article className="rounded-lg border border-gray-100 bg-white p-6 shadow-sm">
+                    <SurfaceCard
+                      as="article"
+                      className="rounded-lg border border-gray-100 bg-white p-6 shadow-sm"
+                    >
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                         <h3 className="text-xl font-semibold text-gray-900">
                           {track.title}
@@ -449,7 +459,7 @@ const ServicesMain = () => {
                       <p className="mt-4 text-gray-600 leading-relaxed">
                         {track.text}
                       </p>
-                    </article>
+                    </SurfaceCard>
                   </FadeInSection>
                 ))}
               </div>
@@ -531,15 +541,13 @@ const ServicesMain = () => {
 
               <div className="grid sm:grid-cols-2 gap-4">
                 {supportServices.map(({ title, Icon }) => (
-                  <div
+                  <SurfaceCard
                     key={title}
                     className="rounded-lg bg-white p-5 shadow-sm flex items-center gap-4"
                   >
-                    <div className="h-11 w-11 rounded-lg bg-[#EB2127]/10 flex items-center justify-center">
-                      <Icon className="h-5 w-5 text-[#EB2127]" />
-                    </div>
+                    <IconBadge Icon={Icon} size="sm" />
                     <span className="font-semibold text-gray-900">{title}</span>
-                  </div>
+                  </SurfaceCard>
                 ))}
               </div>
             </div>
@@ -561,13 +569,15 @@ const ServicesMain = () => {
               Share your product goal, current challenge, or automation need.
               We will recommend the right service track and delivery scope.
             </p>
-            <Link
+            <Button
+              as={Link}
               to="/contact"
-              className="mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-white px-8 py-3 font-medium text-[#EB2127] transition-colors hover:bg-gray-100"
+              variant="white"
+              className="mt-8"
             >
               Request consultation
               <ArrowRight className="h-5 w-5" />
-            </Link>
+            </Button>
           </div>
         </section>
       </main>

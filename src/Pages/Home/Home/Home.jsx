@@ -27,6 +27,9 @@ import SlideInSection from "../../../Components/Slider/SlideInSection";
 import SmoothLetterFade from "../../../Components/TypingEffect/SmoothLetterFade";
 import Counter from "../../../Components/Counter/Counter";
 import GlobalSpinner from "../../../Components/Spinner/GlobalSpinner";
+import Button from "../../../Components/UI/Button";
+import IconBadge from "../../../Components/UI/IconBadge";
+import SurfaceCard from "../../../Components/UI/SurfaceCard";
 import TrustedCompaniesSection from "../../Services/TrustedCompaniesSection";
 import heroImage from "../../../assets/Images/Contact/img.png";
 import aboutImage from "../../../assets/Images/About/img1.png";
@@ -219,19 +222,21 @@ const Home = () => {
                 </p>
 
                 <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                  <Link
+                  <Button
+                    as={Link}
                     to="/contact"
-                    className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#EB2127] px-6 py-3 font-medium text-white shadow-md transition-colors hover:bg-[#C81016]"
+                    variant="primary"
                   >
                     Get estimate
                     <Rocket className="h-5 w-5" />
-                  </Link>
-                  <Link
+                  </Button>
+                  <Button
+                    as={Link}
                     to="/services"
-                    className="inline-flex items-center justify-center rounded-lg border border-[#EB2127] bg-white px-6 py-3 font-medium text-[#EB2127] transition-colors hover:bg-[#fff1f1]"
+                    variant="outline"
                   >
                     Our services
-                  </Link>
+                  </Button>
                 </div>
               </div>
             </SlideInSection>
@@ -305,15 +310,17 @@ const Home = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {engagementModels.map(({ title, Icon, text }, index) => (
                 <FadeInSection key={title} delay={index * 0.12}>
-                  <article className="h-full rounded-lg border border-gray-100 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                    <div className="mb-6 h-14 w-14 rounded-lg bg-[#EB2127]/10 flex items-center justify-center">
-                      <Icon className="h-7 w-7 text-[#EB2127]" />
-                    </div>
+                  <SurfaceCard
+                    as="article"
+                    hover
+                    className="h-full rounded-lg border border-gray-100 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                  >
+                    <IconBadge Icon={Icon} size="lg" className="mb-6" />
                     <h3 className="text-xl font-semibold text-gray-900">
                       {title}
                     </h3>
                     <p className="mt-4 text-gray-600 leading-relaxed">{text}</p>
-                  </article>
+                  </SurfaceCard>
                 </FadeInSection>
               ))}
             </div>
@@ -337,15 +344,17 @@ const Home = () => {
                 </p>
                 <div className="mt-8 grid sm:grid-cols-2 gap-4">
                   {values.map(({ title, Icon, text }) => (
-                    <div key={title} className="rounded-lg bg-white p-5 shadow-sm">
-                      <Icon className="h-6 w-6 text-[#EB2127]" />
+                    <SurfaceCard key={title} className="rounded-lg bg-white p-5 shadow-sm">
+                      {React.createElement(Icon, {
+                        className: "h-6 w-6 text-[#EB2127]",
+                      })}
                       <h3 className="mt-3 font-semibold text-gray-900">
                         {title}
                       </h3>
                       <p className="mt-2 text-sm text-gray-600 leading-relaxed">
                         {text}
                       </p>
-                    </div>
+                    </SurfaceCard>
                   ))}
                 </div>
               </div>
@@ -385,9 +394,15 @@ const Home = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map(({ title, Icon, text }, index) => (
                 <FadeInSection key={title} delay={index * 0.07}>
-                  <article className="h-full rounded-lg bg-[#FDF8F8] p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                  <SurfaceCard
+                    as="article"
+                    hover
+                    className="h-full rounded-lg bg-[#FDF8F8] p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                  >
                     <div className="mb-5 h-12 w-12 rounded-lg bg-white flex items-center justify-center shadow-sm">
-                      <Icon className="h-6 w-6 text-[#EB2127]" />
+                      {React.createElement(Icon, {
+                        className: "h-6 w-6 text-[#EB2127]",
+                      })}
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900">
                       {title}
@@ -395,7 +410,7 @@ const Home = () => {
                     <p className="mt-3 text-sm text-gray-600 leading-relaxed">
                       {text}
                     </p>
-                  </article>
+                  </SurfaceCard>
                 </FadeInSection>
               ))}
             </div>
@@ -497,12 +512,14 @@ const Home = () => {
                   Ready systems and proven product experience
                 </h2>
               </div>
-              <Link
+              <Button
+                as={Link}
                 to="/products"
-                className="inline-flex w-fit items-center justify-center rounded-lg bg-[#EB2127] px-6 py-3 font-medium text-white transition-colors hover:bg-[#C81016]"
+                variant="primaryFlat"
+                className="w-fit"
               >
                 View products
-              </Link>
+              </Button>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -580,12 +597,14 @@ const Home = () => {
               Tell us what you want to improve, automate, or launch. Our team
               will help you choose the right technical path and delivery model.
             </p>
-            <Link
+            <Button
+              as={Link}
               to="/contact"
-              className="mt-8 inline-flex items-center justify-center rounded-lg bg-white px-8 py-3 font-medium text-[#EB2127] transition-colors hover:bg-gray-100"
+              variant="white"
+              className="mt-8"
             >
               Contact us
-            </Link>
+            </Button>
           </div>
         </section>
       </main>

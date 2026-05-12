@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Button from '../../../Components/UI/Button';
+import { TextInput } from '../../../Components/UI/FormField';
 
 const Footer = () => {
 
@@ -90,16 +92,19 @@ const Footer = () => {
                         <div>
                             <h3 className="text-lg font-semibold text-gray-800 mb-6">Get In Touch</h3>
                             <div className="space-y-4">
-                                <input
+                                <TextInput
                                     type="email"
                                     placeholder="Enter your Email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#EB2127] focus:border-transparent"
+                                    className="rounded-lg border-gray-200 bg-white px-4 py-3 focus:border-transparent"
                                 />
-                                <button className="w-full  bg-[#EB2127] text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                                <Button
+                                    variant="primaryFlat"
+                                    className="w-full py-3 px-6"
+                                >
                                     Subscribe
-                                </button>
+                                </Button>
                             </div>
                         </div>
                     </div>

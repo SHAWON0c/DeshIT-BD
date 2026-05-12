@@ -3,6 +3,8 @@ import img from '../../assets/Images/Contact/img.png';
 import SmoothLetterFade from "../../Components/TypingEffect/SmoothLetterFade";
 import GlobalSpinner from "../../Components/Spinner/GlobalSpinner"; // ✅ loader
 import React, { useEffect, useState } from "react";
+import Button from "../../Components/UI/Button";
+import { TextArea, TextInput } from "../../Components/UI/FormField";
 
 export default function ContactPage() {
   const [loading, setLoading] = useState(true);
@@ -101,9 +103,9 @@ export default function ContactPage() {
           loading ? "opacity-0 pointer-events-none" : "opacity-100"
         }`}
       >
-        <div className="w-full mx-auto grid lg:grid-cols-2 gap-16">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* Contact Info */}
-          <div className=" w-[400px]animate-slide-in-left space-y-8 font-poppins ml-2 sm:ml-4 md:ml-8 lg:ml-72">
+          <div className="w-full max-w-[400px] animate-slide-in-left space-y-8 font-poppins">
             <div>
               <h3 className="text-[20px] font-semibold text-gray-900 mb-4">Our Location</h3>
               <p className="text-gray-600 text-2xl">
@@ -127,34 +129,31 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div>
+          <div className="w-full">
             <form className="space-y-6 animate-slide-in-right">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input
+                <TextInput
                   placeholder="Name"
-                  className="w-full p-4 border bg-[#FDF8F8] border-gray-300 rounded-3xl"
                 />
-                <input
+                <TextInput
                   placeholder="Email"
                   type="email"
-                  className="w-full p-3 bg-[#FDF8F8] border border-gray-300 rounded-3xl"
+                  className="p-3"
                 />
               </div>
-              <input
+              <TextInput
                 placeholder="Subject"
-                className="w-full p-4 border bg-[#FDF8F8] border-gray-300 rounded-3xl"
               />
-              <textarea
+              <TextArea
                 placeholder="Your Comment"
                 rows={6}
-                className="w-full p-4 border border-gray-300 bg-[#FDF8F8] rounded-3xl resize-none"
               />
-              <button
+              <Button
                 type="submit"
-                className="bg-[#EB2127] text-white px-8 py-3 rounded-2xl button-bottom-shadow hover:translate-y-[-2px] transition-all duration-300"
+                variant="contact"
               >
                 Send Your Message
-              </button>
+              </Button>
             </form>
           </div>
         </div>
