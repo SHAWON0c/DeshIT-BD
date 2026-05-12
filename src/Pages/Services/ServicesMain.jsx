@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Suspense, lazy, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
@@ -15,10 +15,8 @@ import {
   Rocket,
   ShieldCheck,
   Smartphone,
-  Sparkles,
   Target,
   UsersRound,
-  Workflow,
 } from "lucide-react";
 import FadeInSection from "../../Components/FadeInSection";
 import SlideInSection from "../../Components/Slider/SlideInSection";
@@ -27,6 +25,8 @@ import GlobalSpinner from "../../Components/Spinner/GlobalSpinner";
 import Button from "../../Components/UI/Button";
 import IconBadge from "../../Components/UI/IconBadge";
 import SurfaceCard from "../../Components/UI/SurfaceCard";
+
+const ServicesHero3D = lazy(() => import("./ServicesHero3D"));
 
 const serviceGroups = [
   {
@@ -156,15 +156,6 @@ const scopeMatrix = [
   ["Operations", "Deployment, monitoring guidance, documentation, and support"],
 ];
 
-const heroServiceNodes = [
-  { label: "Web", Icon: Globe2 },
-  { label: "Mobile", Icon: Smartphone },
-  { label: "AI", Icon: BrainCircuit },
-  { label: "IoT", Icon: Cpu },
-  { label: "QA", Icon: ClipboardCheck },
-  { label: "Launch", Icon: Rocket },
-];
-
 const ServicesMain = () => {
   const [loading, setLoading] = useState(true);
 
@@ -182,157 +173,17 @@ const ServicesMain = () => {
           loading ? "opacity-0 pointer-events-none" : "opacity-100"
         }`}
       >
-        <section
-          className="bg-[#111827] pt-36 pb-16 md:pt-44 md:pb-24 text-white overflow-hidden"
-          style={{
-            background:
-              "radial-gradient(circle at 78% 28%, rgba(235, 33, 39, 0.22), transparent 30%), #111827",
-          }}
+        <Suspense
+          fallback={
+            <section className="bg-[#111827] pt-36 pb-16 md:pt-44 md:pb-24">
+              <div className="max-w-7xl mx-auto px-6 lg:px-0">
+                <div className="h-[420px] rounded-lg bg-white/5"></div>
+              </div>
+            </section>
+          }
         >
-          <div className="max-w-7xl mx-auto px-6 lg:px-0">
-            <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-12 items-center">
-              <SlideInSection direction="left">
-                <div>
-                  <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-[#EB2127]">
-                    <Sparkles className="h-4 w-4" />
-                    Service command center
-                  </p>
-                  <h1 className="mt-6 text-4xl md:text-6xl lg:text-[68px] font-bold leading-tight text-white">
-                    Technical services built around your product scope
-                  </h1>
-                  <p className="mt-6 max-w-2xl text-base md:text-xl leading-relaxed text-gray-300">
-                    Pick a focused capability, assemble a dedicated delivery
-                    team, or hand us the full product scope. Every service is
-                    structured around outcomes, timelines, and maintainable
-                    software.
-                  </p>
-                  <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                    <Button
-                      as={Link}
-                      to="/contact"
-                      variant="primary"
-                    >
-                      Discuss service scope
-                      <ArrowRight className="h-5 w-5" />
-                    </Button>
-                    <Button
-                      as="a"
-                      href="#catalog"
-                      variant="darkOutline"
-                    >
-                      Browse catalog
-                    </Button>
-                  </div>
-                </div>
-              </SlideInSection>
-
-              <SlideInSection direction="right">
-                <div className="relative min-h-[430px] md:min-h-[520px]">
-                  <div className="absolute inset-4 rounded-full border border-white/10"></div>
-                  <div className="absolute inset-16 rounded-full border border-[#EB2127]/20"></div>
-
-                  <div className="absolute left-1/2 top-1/2 z-10 h-48 w-48 -translate-x-1/2 -translate-y-1/2">
-                    {[0, 1, 2, 3].map((layer) => (
-                      <div
-                        key={layer}
-                        className="absolute left-1/2 top-1/2 h-36 w-40 -translate-x-1/2 border border-[#EB2127]/20 shadow-2xl"
-                        style={{
-                          clipPath:
-                            "polygon(50% 0%, 100% 23%, 100% 73%, 50% 100%, 0 73%, 0 23%)",
-                          background:
-                            layer === 0
-                              ? "rgba(235, 33, 39, 0.28)"
-                              : "rgba(235, 33, 39, 0.13)",
-                          transform: `translate(-50%, calc(-50% + ${
-                            layer * 18
-                          }px))`,
-                          zIndex: 4 - layer,
-                        }}
-                      ></div>
-                    ))}
-                    <div
-                      className="absolute left-1/2 top-1/2 z-20 flex h-24 w-28 -translate-x-1/2 -translate-y-1/2 items-center justify-center bg-white text-[#1a365d] shadow-xl"
-                      style={{
-                        clipPath:
-                          "polygon(50% 0%, 100% 23%, 100% 73%, 50% 100%, 0 73%, 0 23%)",
-                      }}
-                    >
-                      <Workflow className="h-12 w-12 text-[#EB2127]" />
-                    </div>
-                  </div>
-
-                  <div className="hero-hex-orbit absolute left-1/2 top-1/2 z-20 h-[330px] w-[330px] -translate-x-1/2 -translate-y-1/2 md:h-[450px] md:w-[450px]">
-                    <div className="hero-hex-orbit-spin absolute inset-0">
-                      {heroServiceNodes.map(({ label, Icon }, index) => {
-                        const angle = (360 / heroServiceNodes.length) * index;
-                        return (
-                          <div
-                            key={label}
-                            className="hero-hex-node absolute left-1/2 top-1/2 flex h-[82px] w-[82px] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center bg-white text-[#1a365d] shadow-xl md:h-24 md:w-24"
-                            style={{
-                              "--node-angle": `${angle}deg`,
-                              clipPath:
-                                "polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0 50%)",
-                            }}
-                          >
-                            <div className="hero-hex-node-content flex flex-col items-center justify-center">
-                              {React.createElement(Icon, {
-                                className:
-                                  "h-6 w-6 text-[#EB2127] md:h-7 md:w-7",
-                              })}
-                              <span className="mt-1 text-[11px] font-bold md:text-xs">
-                                {label}
-                              </span>
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-
-                  <div className="absolute left-1/2 top-6 hidden w-px -translate-x-1/2 bg-[#EB2127]/40 md:block md:h-[100px]"></div>
-                  <div className="absolute bottom-6 left-1/2 hidden w-px -translate-x-1/2 bg-[#EB2127]/40 md:block md:h-[100px]"></div>
-                  <div className="absolute left-16 top-1/2 hidden h-px -translate-y-1/2 bg-[#EB2127]/40 md:block md:w-[120px]"></div>
-                  <div className="absolute right-16 top-1/2 hidden h-px -translate-y-1/2 bg-[#EB2127]/40 md:block md:w-[120px]"></div>
-
-                  <style>{`
-                    .hero-hex-orbit {
-                      --orbit-radius: 128px;
-                    }
-                    @media (min-width: 768px) {
-                      .hero-hex-orbit {
-                        --orbit-radius: 178px;
-                      }
-                    }
-                    .hero-hex-orbit-spin {
-                      animation: heroHexOrbit 22s linear infinite;
-                      transform-origin: 50% 50%;
-                    }
-                    .hero-hex-node {
-                      transform:
-                        translate(-50%, -50%)
-                        rotate(var(--node-angle))
-                        translateX(var(--orbit-radius))
-                        rotate(calc(-1 * var(--node-angle)));
-                      transform-origin: center;
-                    }
-                    .hero-hex-node-content {
-                      animation: heroHexCounterOrbit 22s linear infinite;
-                    }
-                    @keyframes heroHexOrbit {
-                      from { transform: rotate(0deg); }
-                      to { transform: rotate(360deg); }
-                    }
-                    @keyframes heroHexCounterOrbit {
-                      from { transform: rotate(0deg); }
-                      to { transform: rotate(-360deg); }
-                    }
-                  `}</style>
-                </div>
-              </SlideInSection>
-            </div>
-          </div>
-        </section>
+          <ServicesHero3D />
+        </Suspense>
 
         <section className="sticky top-[66px] z-30 border-b border-gray-100 bg-white/95 py-4 backdrop-blur-md">
           <div className="max-w-7xl mx-auto px-6 lg:px-0 overflow-x-auto">
