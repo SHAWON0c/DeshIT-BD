@@ -22,7 +22,7 @@ const Founder = () => {
                 Do not suffer novices, hire a skilled team!
               </h3>
               <p className="text-gray-400 text-sm">Fuad Bin Omar, COO</p>
-              <h2 className="mt-2 text-orange-500 rounded-md text-sm font-medium flex flex-row gap-2 items-center justify-center sm:justify-start">
+              <h2 className="mt-2 text-[#EB2127] rounded-md text-sm font-medium flex flex-row gap-2 items-center justify-center sm:justify-start">
                 <span>
                   <img src={icon} alt="calendar icon" />
                 </span>
@@ -34,21 +34,21 @@ const Founder = () => {
           {/* Right side - Statistics */}
           <div className="flex flex-row flex-nowrap justify-center md:justify-end gap-8">
   <div className="text-center">
-    <div className="lg:text-3xl text-lg font-bold text-orange-500">
+    <div className="lg:text-3xl text-lg font-bold text-[#EB2127]">
       <Counter end={16} duration={2000} />
     </div>
     <div className="text-sm text-gray-400">Years of Experience</div>
   </div>
 
   <div className="text-center">
-    <div className="text-lg lg:text-3xl font-bold text-orange-500">
+    <div className="text-lg lg:text-3xl font-bold text-[#EB2127]">
       <Counter end={365} duration={2500} />
     </div>
     <div className="text-sm text-gray-400">Deliver Projects</div>
   </div>
 
   <div className="text-center">
-    <div className="text-lg lg:text-3xl font-bold text-orange-500">
+    <div className="text-lg lg:text-3xl font-bold text-[#EB2127]">
       <Counter end={25} duration={2200} />
     </div>
     <div className="text-sm text-gray-400">Countries Served</div>

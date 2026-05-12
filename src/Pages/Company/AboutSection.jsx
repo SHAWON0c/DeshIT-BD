@@ -26,17 +26,17 @@ export default function AboutSection() {
         }`}
       >
         <div className="max-w-7xl px-6 lg:px-0 mx-auto">
-          {/* DeshITBD & Simplifying Text */}
+          {/* Ondrobit & Simplifying Text */}
           <div className="w-full space-y-6">
             <SlideInSection direction="left">
               <h1 className="text-3xl md:text-4xl lg:text-[60px] font-bold text-[#1a365d] mb-4">
-                DeshITBD
+                Ondrobit
               </h1>
             </SlideInSection>
 
             <SlideInSection direction="left">
               <p
-                className="text-2xl md:text-[40px] text-[#ff7a7a] font-medium uppercase"
+                className="text-2xl md:text-[40px] text-[#EB2127] font-medium uppercase"
                 style={{ letterSpacing: "0.1em" }}
               >
                 SIMPLIFYING COMPLEXITY THROUGH TECHNOLOGY
@@ -48,7 +48,7 @@ export default function AboutSection() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 mt-10">
             <SlideInSection direction="left">
               <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed w-full md:w-auto lg:w-[950px] ">
-                We, DeshITbd is a mobile application development startup in
+                We, Ondrobit is a mobile application development startup in
                 Bangladesh. We can develop apps from sketch to workable apps and
                 bring them to the marketplace like Google Play. We have a
                 full-stack mobile application development team consisting of
@@ -117,7 +117,7 @@ export default function AboutSection() {
 
       {/* How We Work Section */}
       <section
-        style={{ background: "linear-gradient(90deg, #FA7470 0%, #FA9370 100%)" }}
+        style={{ background: "linear-gradient(90deg, #EB2127 0%, #C81016 100%)" }}
         className={`py-16 lg:mt-20 px-6 md:px-12 lg:px-20 transition-opacity duration-500 ${
           loading ? "opacity-0 pointer-events-none" : "opacity-100"
         }`}
@@ -136,7 +136,7 @@ export default function AboutSection() {
             effectively and deliver the quality product.
           </p>
 
-          <button className="bg-white text-[#ff9999] hover:bg-gray-100 px-8 py-3 rounded-full font-medium">
+          <button className="bg-white text-[#EB2127] hover:bg-gray-100 px-8 py-3 rounded-full font-medium">
             Free Consultation
           </button>
         </div>

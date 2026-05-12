@@ -4,7 +4,7 @@ export default function Card({
     title,
     image,
     imageAlt = "",
-    backgroundColor = "from-[#FA7B70] to-[#FA5A60]",
+    backgroundColor = "from-[#EB2127] to-[#C81016]",
     className = "",
     onClick,
 }) {

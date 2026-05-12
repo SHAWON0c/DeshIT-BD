@@ -183,14 +183,14 @@ const ServicesMain = () => {
           className="bg-[#111827] pt-36 pb-16 md:pt-44 md:pb-24 text-white overflow-hidden"
           style={{
             background:
-              "radial-gradient(circle at 78% 28%, rgba(250, 123, 112, 0.22), transparent 30%), #111827",
+              "radial-gradient(circle at 78% 28%, rgba(235, 33, 39, 0.22), transparent 30%), #111827",
           }}
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-0">
             <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-12 items-center">
               <SlideInSection direction="left">
                 <div>
-                  <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-[#FA7B70]">
+                  <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-[#EB2127]">
                     <Sparkles className="h-4 w-4" />
                     Service command center
                   </p>
@@ -206,7 +206,7 @@ const ServicesMain = () => {
                   <div className="mt-8 flex flex-col sm:flex-row gap-4">
                     <Link
                       to="/contact"
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#FA7B70] px-6 py-3 font-medium text-white shadow-md transition-colors hover:bg-[#ef665b]"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#EB2127] px-6 py-3 font-medium text-white shadow-md transition-colors hover:bg-[#C81016]"
                     >
                       Discuss service scope
                       <ArrowRight className="h-5 w-5" />
@@ -224,20 +224,20 @@ const ServicesMain = () => {
               <SlideInSection direction="right">
                 <div className="relative min-h-[430px] md:min-h-[520px]">
                   <div className="absolute inset-4 rounded-full border border-white/10"></div>
-                  <div className="absolute inset-16 rounded-full border border-[#FA7B70]/20"></div>
+                  <div className="absolute inset-16 rounded-full border border-[#EB2127]/20"></div>
 
                   <div className="absolute left-1/2 top-1/2 z-10 h-48 w-48 -translate-x-1/2 -translate-y-1/2">
                     {[0, 1, 2, 3].map((layer) => (
                       <div
                         key={layer}
-                        className="absolute left-1/2 top-1/2 h-36 w-40 -translate-x-1/2 border border-[#FA7B70]/20 shadow-2xl"
+                        className="absolute left-1/2 top-1/2 h-36 w-40 -translate-x-1/2 border border-[#EB2127]/20 shadow-2xl"
                         style={{
                           clipPath:
                             "polygon(50% 0%, 100% 23%, 100% 73%, 50% 100%, 0 73%, 0 23%)",
                           background:
                             layer === 0
-                              ? "rgba(250, 123, 112, 0.28)"
-                              : "rgba(250, 123, 112, 0.13)",
+                              ? "rgba(235, 33, 39, 0.28)"
+                              : "rgba(235, 33, 39, 0.13)",
                           transform: `translate(-50%, calc(-50% + ${
                             layer * 18
                           }px))`,
@@ -252,7 +252,7 @@ const ServicesMain = () => {
                           "polygon(50% 0%, 100% 23%, 100% 73%, 50% 100%, 0 73%, 0 23%)",
                       }}
                     >
-                      <Workflow className="h-12 w-12 text-[#FA7B70]" />
+                      <Workflow className="h-12 w-12 text-[#EB2127]" />
                     </div>
                   </div>
 
@@ -271,7 +271,7 @@ const ServicesMain = () => {
                             }}
                           >
                             <div className="hero-hex-node-content flex flex-col items-center justify-center">
-                              <Icon className="h-6 w-6 text-[#FA7B70] md:h-7 md:w-7" />
+                              <Icon className="h-6 w-6 text-[#EB2127] md:h-7 md:w-7" />
                               <span className="mt-1 text-[11px] font-bold md:text-xs">
                                 {label}
                               </span>
@@ -282,10 +282,10 @@ const ServicesMain = () => {
                     </div>
                   </div>
 
-                  <div className="absolute left-1/2 top-6 hidden w-px -translate-x-1/2 bg-[#FA7B70]/40 md:block md:h-[100px]"></div>
-                  <div className="absolute bottom-6 left-1/2 hidden w-px -translate-x-1/2 bg-[#FA7B70]/40 md:block md:h-[100px]"></div>
-                  <div className="absolute left-16 top-1/2 hidden h-px -translate-y-1/2 bg-[#FA7B70]/40 md:block md:w-[120px]"></div>
-                  <div className="absolute right-16 top-1/2 hidden h-px -translate-y-1/2 bg-[#FA7B70]/40 md:block md:w-[120px]"></div>
+                  <div className="absolute left-1/2 top-6 hidden w-px -translate-x-1/2 bg-[#EB2127]/40 md:block md:h-[100px]"></div>
+                  <div className="absolute bottom-6 left-1/2 hidden w-px -translate-x-1/2 bg-[#EB2127]/40 md:block md:h-[100px]"></div>
+                  <div className="absolute left-16 top-1/2 hidden h-px -translate-y-1/2 bg-[#EB2127]/40 md:block md:w-[120px]"></div>
+                  <div className="absolute right-16 top-1/2 hidden h-px -translate-y-1/2 bg-[#EB2127]/40 md:block md:w-[120px]"></div>
 
                   <style>{`
                     .hero-hex-orbit {
@@ -333,7 +333,7 @@ const ServicesMain = () => {
                 <a
                   key={service.id}
                   href={`#${service.id}`}
-                  className="rounded-lg border border-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:border-[#FA7B70] hover:text-[#FA7B70]"
+                  className="rounded-lg border border-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:border-[#EB2127] hover:text-[#EB2127]"
                 >
                   {service.title}
                 </a>
@@ -366,8 +366,8 @@ const ServicesMain = () => {
                       className="grid lg:grid-cols-[0.75fr_1.25fr] gap-6 rounded-lg bg-white p-6 md:p-8 shadow-sm scroll-mt-32"
                     >
                       <div>
-                        <div className="h-14 w-14 rounded-lg bg-[#FA7B70]/10 flex items-center justify-center">
-                          <Icon className="h-7 w-7 text-[#FA7B70]" />
+                        <div className="h-14 w-14 rounded-lg bg-[#EB2127]/10 flex items-center justify-center">
+                          <Icon className="h-7 w-7 text-[#EB2127]" />
                         </div>
                         <h3 className="mt-5 text-2xl font-bold text-[#1a365d]">
                           {title}
@@ -385,7 +385,7 @@ const ServicesMain = () => {
                           <div className="mt-4 space-y-3">
                             {deliverables.map((item) => (
                               <div key={item} className="flex items-start gap-3">
-                                <CheckCircle2 className="mt-0.5 h-5 w-5 text-[#FA7B70] flex-shrink-0" />
+                                <CheckCircle2 className="mt-0.5 h-5 w-5 text-[#EB2127] flex-shrink-0" />
                                 <span className="text-gray-700">{item}</span>
                               </div>
                             ))}
@@ -421,7 +421,7 @@ const ServicesMain = () => {
             <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-12 items-start">
               <SlideInSection direction="left">
                 <div>
-                  <p className="text-[#FA7B70] font-semibold mb-3">
+                  <p className="text-[#EB2127] font-semibold mb-3">
                     Delivery tracks
                   </p>
                   <h2 className="text-3xl md:text-5xl font-bold text-[#1a365d] leading-tight">
@@ -442,7 +442,7 @@ const ServicesMain = () => {
                         <h3 className="text-xl font-semibold text-gray-900">
                           {track.title}
                         </h3>
-                        <span className="w-fit rounded-lg bg-[#FA7B70]/10 px-3 py-2 text-sm font-semibold text-[#FA7B70]">
+                        <span className="w-fit rounded-lg bg-[#EB2127]/10 px-3 py-2 text-sm font-semibold text-[#EB2127]">
                           {track.duration}
                         </span>
                       </div>
@@ -460,7 +460,7 @@ const ServicesMain = () => {
         <section className="py-16 md:py-24 bg-[#111827] text-white">
           <div className="max-w-7xl mx-auto px-6 lg:px-0">
             <div className="max-w-3xl mb-12">
-              <p className="text-[#FA7B70] font-semibold mb-3">
+              <p className="text-[#EB2127] font-semibold mb-3">
                 Delivery workflow
               </p>
               <h2 className="text-3xl md:text-5xl font-bold leading-tight">
@@ -472,7 +472,7 @@ const ServicesMain = () => {
               {process.map((item, index) => (
                 <FadeInSection key={item} delay={index * 0.07}>
                   <div className="h-full rounded-lg border border-white/10 bg-white/5 p-5">
-                    <p className="text-sm font-semibold text-[#FA7B70]">
+                    <p className="text-sm font-semibold text-[#EB2127]">
                       Step {index + 1}
                     </p>
                     <p className="mt-4 font-semibold text-white">{item}</p>
@@ -486,7 +486,7 @@ const ServicesMain = () => {
         <section className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6 lg:px-0 grid lg:grid-cols-[1fr_1fr] gap-12 items-start">
             <div>
-              <p className="text-[#FA7B70] font-semibold mb-3">
+              <p className="text-[#EB2127] font-semibold mb-3">
                 Scope clarity
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-[#1a365d] leading-tight">
@@ -521,7 +521,7 @@ const ServicesMain = () => {
           <div className="max-w-7xl mx-auto px-6 lg:px-0">
             <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
               <div>
-                <p className="text-[#FA7B70] font-semibold mb-3">
+                <p className="text-[#EB2127] font-semibold mb-3">
                   Supporting services
                 </p>
                 <h2 className="text-3xl md:text-5xl font-bold text-[#1a365d] leading-tight">
@@ -535,8 +535,8 @@ const ServicesMain = () => {
                     key={title}
                     className="rounded-lg bg-white p-5 shadow-sm flex items-center gap-4"
                   >
-                    <div className="h-11 w-11 rounded-lg bg-[#FA7B70]/10 flex items-center justify-center">
-                      <Icon className="h-5 w-5 text-[#FA7B70]" />
+                    <div className="h-11 w-11 rounded-lg bg-[#EB2127]/10 flex items-center justify-center">
+                      <Icon className="h-5 w-5 text-[#EB2127]" />
                     </div>
                     <span className="font-semibold text-gray-900">{title}</span>
                   </div>
@@ -549,7 +549,7 @@ const ServicesMain = () => {
         <section
           className="py-16 md:py-20"
           style={{
-            background: "linear-gradient(90deg, #FA7470 0%, #FA9370 100%)",
+            background: "linear-gradient(90deg, #EB2127 0%, #C81016 100%)",
           }}
         >
           <div className="max-w-5xl mx-auto px-6 text-center">
@@ -563,7 +563,7 @@ const ServicesMain = () => {
             </p>
             <Link
               to="/contact"
-              className="mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-white px-8 py-3 font-medium text-[#FA7B70] transition-colors hover:bg-gray-100"
+              className="mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-white px-8 py-3 font-medium text-[#EB2127] transition-colors hover:bg-gray-100"
             >
               Request consultation
               <ArrowRight className="h-5 w-5" />

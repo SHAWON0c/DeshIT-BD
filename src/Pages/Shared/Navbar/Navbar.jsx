@@ -92,8 +92,8 @@ const Navbar = () => {
                   to={path}
                   className={`${baseLinkClass} ${
                     isActive(path)
-                      ? "text-orange-500"
-                      : "text-black hover:text-orange-500"
+                      ? "text-[#EB2127]"
+                      : "text-black hover:text-[#EB2127]"
                   }`}
                 >
                   {name}
@@ -110,7 +110,7 @@ const Navbar = () => {
             <div className="flex items-center justify-between mb-6">
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-2xl text-gray-700 hover:text-orange-500"
+                className="text-2xl text-gray-700 hover:text-[#EB2127]"
               >
                 ✕
               </button>
@@ -132,8 +132,8 @@ const Navbar = () => {
                   to={path}
                   className={`${baseLinkClass} ${
                     isActive(path)
-                      ? "text-orange-500"
-                      : "text-gray-600 hover:text-orange-500"
+                      ? "text-[#EB2127]"
+                      : "text-gray-600 hover:text-[#EB2127]"
                   }`}
                   onClick={() => setIsOpen(false)}
                 >

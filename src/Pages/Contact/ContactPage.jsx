@@ -23,7 +23,7 @@ export default function ContactPage() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* logo bottom right side */}
         <div
-          className="absolute top-72 right-72 bg-[#F588771C] rounded-full 0"
+          className="absolute top-72 right-72 bg-[#EB21271C] rounded-full 0"
           style={{
             width: "72px",
             height: "72px",
@@ -33,24 +33,24 @@ export default function ContactPage() {
 
         {/* logo bottom side */}
         <div
-          className="absolute w-10 h-10 bg-[#F588771C] rounded-full"
+          className="absolute w-10 h-10 bg-[#EB21271C] rounded-full"
           style={{ animation: "slideIn45 1s ease-out forwards" }}
         />
 
         <div
-          className="absolute top-80 right-3/8 w-10 h-10 bg-[#F588771C] rounded-full"
+          className="absolute top-80 right-3/8 w-10 h-10 bg-[#EB21271C] rounded-full"
           style={{ animation: "wiggleDiagonal 1.5s ease-in-out infinite" }}
         ></div>
 
         {/* left */}
         <div
-          className="absolute top-20 left-52 w-20 h-20 bg-[#F588771C] rounded-full animate-pulse"
+          className="absolute top-20 left-52 w-20 h-20 bg-[#EB21271C] rounded-full animate-pulse"
           style={{ animationDelay: "2s" }}
         ></div>
 
         {/* logo up side */}
         <div
-          className="absolute top-44 left-4/7 bg-[#F588771C] rounded-full"
+          className="absolute top-44 left-4/7 bg-[#EB21271C] rounded-full"
           style={{
             width: "80px",
             height: "80px",
@@ -60,7 +60,7 @@ export default function ContactPage() {
 
         {/* top */}
         <div
-          className="absolute -top-52 right-64 w-64 h-64 bg-[#F588771C] rounded-full"
+          className="absolute -top-52 right-64 w-64 h-64 bg-[#EB21271C] rounded-full"
           style={{ animationDelay: "3.5s" }}
         ></div>
       </div>
@@ -120,7 +120,7 @@ export default function ContactPage() {
                   <Phone className="w-5 h-5 mr-3" /> +880 181 332 0587
                 </div>
                 <div className="flex items-center text-gray-600 text-2xl">
-                  <Mail className="w-5 h-5 mr-3" /> info@deshit-bd.com
+                  <Mail className="w-5 h-5 mr-3" /> info@ondrobit.com
                 </div>
               </div>
             </div>
@@ -151,7 +151,7 @@ export default function ContactPage() {
               />
               <button
                 type="submit"
-                className="bg-[#FA7B70] text-white px-8 py-3 rounded-2xl button-bottom-shadow hover:translate-y-[-2px] transition-all duration-300"
+                className="bg-[#EB2127] text-white px-8 py-3 rounded-2xl button-bottom-shadow hover:translate-y-[-2px] transition-all duration-300"
               >
                 Send Your Message
               </button>

@@ -39,7 +39,7 @@ const Portfolio = () => {
 
         {/* Call to Action Button */}
         <div className="text-center">
-          <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+          <button className="bg-[#EB2127] hover:bg-[#C81016] text-white px-6 py-3 rounded-lg font-medium transition-colors">
             Find more case studies
           </button>
         </div>

@@ -95,9 +95,9 @@ const Footer = () => {
                                     placeholder="Enter your Email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-coral-500 focus:border-transparent"
+                                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#EB2127] focus:border-transparent"
                                 />
-                                <button className="w-full  bg-[#FA7B70] text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                                <button className="w-full  bg-[#EB2127] text-white font-medium py-3 px-6 rounded-lg transition-colors">
                                     Subscribe
                                 </button>
                             </div>
@@ -107,7 +107,7 @@ const Footer = () => {
                     {/* Copyright Section */}
                     <div className="mt-12 pt-8 border-t border-gray-200 text-center">
                         <p className="text-gray-600">
-                            © 2020-2025 All Rights Reserved Design by <span className="text-[#FA7B70] font-medium">DeshIT-BD</span>
+                            © 2020-2025 All Rights Reserved Design by <span className="text-[#EB2127] font-medium">Ondrobit</span>
                         </p>
                     </div>
                 </div>

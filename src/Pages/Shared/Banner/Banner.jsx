@@ -83,7 +83,7 @@ const Banner = () => {
                 >
                     <path
                         fillRule="evenodd"
-                        stroke="rgb(250, 112, 112)"
+                        stroke="rgb(235, 33, 39)"
                         strokeWidth="100px"
                         opacity="0.25"
                         fill="none"

@@ -21,7 +21,7 @@ import SlideInSection from "../../Components/Slider/SlideInSection";
 const WorkflowCircle = ({ Icon }) => (
     <div className="flex flex-col items-center text-center">
         <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
-            <Icon className="w-8 h-8 text-orange-500" />
+            <Icon className="w-8 h-8 text-[#EB2127]" />
         </div>
     </div>
 );

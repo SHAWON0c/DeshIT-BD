@@ -205,7 +205,7 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-6 lg:px-0 grid lg:grid-cols-[1.04fr_0.96fr] gap-12 items-center">
             <SlideInSection direction="left">
               <div>
-                <p className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#FA7B70] shadow-sm">
+                <p className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#EB2127] shadow-sm">
                   <Star className="h-4 w-4" />
                   Software company in Bangladesh
                 </p>
@@ -213,7 +213,7 @@ const Home = () => {
                   Expert software development for ambitious businesses
                 </h1>
                 <p className="mt-6 text-base md:text-xl text-gray-600 leading-relaxed max-w-2xl">
-                  DeshIT-BD helps companies design, build, test, and scale
+                  Ondrobit helps companies design, build, test, and scale
                   custom software, web platforms, mobile apps, AI solutions, and
                   automation systems with a reliable engineering team.
                 </p>
@@ -221,14 +221,14 @@ const Home = () => {
                 <div className="mt-8 flex flex-col sm:flex-row gap-4">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#FA7B70] px-6 py-3 font-medium text-white shadow-md transition-colors hover:bg-[#ef665b]"
+                    className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#EB2127] px-6 py-3 font-medium text-white shadow-md transition-colors hover:bg-[#C81016]"
                   >
                     Get estimate
                     <Rocket className="h-5 w-5" />
                   </Link>
                   <Link
                     to="/services"
-                    className="inline-flex items-center justify-center rounded-lg border border-[#FA7B70] bg-white px-6 py-3 font-medium text-[#FA7B70] transition-colors hover:bg-[#fff3f1]"
+                    className="inline-flex items-center justify-center rounded-lg border border-[#EB2127] bg-white px-6 py-3 font-medium text-[#EB2127] transition-colors hover:bg-[#fff1f1]"
                   >
                     Our services
                   </Link>
@@ -245,8 +245,8 @@ const Home = () => {
                 />
                 <div className="static mt-6 md:absolute md:left-0 md:bottom-0 w-full max-w-[390px] rounded-lg bg-white p-5 shadow-xl">
                   <div className="flex items-center gap-3">
-                    <div className="h-12 w-12 rounded-lg bg-[#FA7B70]/10 flex items-center justify-center">
-                      <ShieldCheck className="h-6 w-6 text-[#FA7B70]" />
+                    <div className="h-12 w-12 rounded-lg bg-[#EB2127]/10 flex items-center justify-center">
+                      <ShieldCheck className="h-6 w-6 text-[#EB2127]" />
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900">
@@ -277,7 +277,7 @@ const Home = () => {
                 >
                   <p className="text-3xl md:text-4xl font-bold text-[#1a365d]">
                     <Counter end={metric.value} duration={900} />
-                    <span className="text-[#FA7B70]">{metric.suffix}</span>
+                    <span className="text-[#EB2127]">{metric.suffix}</span>
                   </p>
                   <p className="mt-2 text-sm md:text-base text-gray-500">
                     {metric.label}
@@ -306,8 +306,8 @@ const Home = () => {
               {engagementModels.map(({ title, Icon, text }, index) => (
                 <FadeInSection key={title} delay={index * 0.12}>
                   <article className="h-full rounded-lg border border-gray-100 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                    <div className="mb-6 h-14 w-14 rounded-lg bg-[#FA7B70]/10 flex items-center justify-center">
-                      <Icon className="h-7 w-7 text-[#FA7B70]" />
+                    <div className="mb-6 h-14 w-14 rounded-lg bg-[#EB2127]/10 flex items-center justify-center">
+                      <Icon className="h-7 w-7 text-[#EB2127]" />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900">
                       {title}
@@ -324,12 +324,12 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-6 lg:px-0 grid lg:grid-cols-2 gap-12 items-center">
             <SlideInSection direction="left">
               <div>
-                <p className="text-[#FA7B70] font-semibold mb-3">About us</p>
+                <p className="text-[#EB2127] font-semibold mb-3">About us</p>
                 <h2 className="text-3xl md:text-5xl font-bold text-[#1a365d] leading-tight">
                   We turn business challenges into scalable digital products
                 </h2>
                 <p className="mt-5 text-gray-600 leading-relaxed">
-                  DeshIT-BD builds tailored technology solutions for businesses
+                  Ondrobit builds tailored technology solutions for businesses
                   that need dependable execution. Our developers, designers, QA
                   engineers, and strategists work closely with clients to
                   understand the problem, shape the product, and deliver software
@@ -338,7 +338,7 @@ const Home = () => {
                 <div className="mt-8 grid sm:grid-cols-2 gap-4">
                   {values.map(({ title, Icon, text }) => (
                     <div key={title} className="rounded-lg bg-white p-5 shadow-sm">
-                      <Icon className="h-6 w-6 text-[#FA7B70]" />
+                      <Icon className="h-6 w-6 text-[#EB2127]" />
                       <h3 className="mt-3 font-semibold text-gray-900">
                         {title}
                       </h3>
@@ -354,7 +354,7 @@ const Home = () => {
             <SlideInSection direction="right">
               <img
                 src={aboutImage}
-                alt="DeshIT-BD software team"
+                alt="Ondrobit software team"
                 className="w-full max-w-[520px] mx-auto object-contain"
               />
             </SlideInSection>
@@ -370,7 +370,7 @@ const Home = () => {
         <section className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6 lg:px-0">
             <div className="max-w-4xl mx-auto text-center mb-14">
-              <p className="text-[#FA7B70] font-semibold mb-3">
+              <p className="text-[#EB2127] font-semibold mb-3">
                 Enterprise software development
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-[#1a365d]">
@@ -387,7 +387,7 @@ const Home = () => {
                 <FadeInSection key={title} delay={index * 0.07}>
                   <article className="h-full rounded-lg bg-[#FDF8F8] p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                     <div className="mb-5 h-12 w-12 rounded-lg bg-white flex items-center justify-center shadow-sm">
-                      <Icon className="h-6 w-6 text-[#FA7B70]" />
+                      <Icon className="h-6 w-6 text-[#EB2127]" />
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900">
                       {title}
@@ -405,7 +405,7 @@ const Home = () => {
         <section className="py-16 md:py-24 bg-[#FDF8F8]">
           <div className="max-w-7xl mx-auto px-6 lg:px-0 grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
             <div>
-              <p className="text-[#FA7B70] font-semibold mb-3">
+              <p className="text-[#EB2127] font-semibold mb-3">
                 Our technology
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-[#1a365d] leading-tight">
@@ -435,7 +435,7 @@ const Home = () => {
             <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-center">
               <SlideInSection direction="left">
                 <div>
-                  <p className="text-[#FA7B70] font-semibold mb-3">
+                  <p className="text-[#EB2127] font-semibold mb-3">
                     Why choose us
                   </p>
                   <h2 className="text-3xl md:text-5xl font-bold text-[#1a365d] leading-tight">
@@ -460,7 +460,7 @@ const Home = () => {
                     "Long-term support mindset",
                   ].map((item) => (
                     <div key={item} className="flex items-start gap-3">
-                      <CheckCircle2 className="mt-0.5 h-5 w-5 text-[#FA7B70] flex-shrink-0" />
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 text-[#EB2127] flex-shrink-0" />
                       <span className="text-gray-700">{item}</span>
                     </div>
                   ))}
@@ -476,7 +476,7 @@ const Home = () => {
                 {specializations.map((item) => (
                   <span
                     key={item}
-                    className="rounded-lg border border-[#FA7B70]/25 bg-[#FA7B70]/10 px-4 py-2 text-sm font-medium text-[#1a365d]"
+                    className="rounded-lg border border-[#EB2127]/25 bg-[#EB2127]/10 px-4 py-2 text-sm font-medium text-[#1a365d]"
                   >
                     {item}
                   </span>
@@ -490,7 +490,7 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-6 lg:px-0">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
               <div>
-                <p className="text-[#FA7B70] font-semibold mb-3">
+                <p className="text-[#EB2127] font-semibold mb-3">
                   Products & portfolio
                 </p>
                 <h2 className="text-3xl md:text-5xl font-bold text-[#1a365d]">
@@ -499,7 +499,7 @@ const Home = () => {
               </div>
               <Link
                 to="/products"
-                className="inline-flex w-fit items-center justify-center rounded-lg bg-[#FA7B70] px-6 py-3 font-medium text-white transition-colors hover:bg-[#ef665b]"
+                className="inline-flex w-fit items-center justify-center rounded-lg bg-[#EB2127] px-6 py-3 font-medium text-white transition-colors hover:bg-[#C81016]"
               >
                 View products
               </Link>
@@ -519,7 +519,7 @@ const Home = () => {
                     />
                     <div className="p-5">
                       <div className="flex items-center gap-3">
-                        <Laptop className="h-5 w-5 text-[#FA7B70]" />
+                        <Laptop className="h-5 w-5 text-[#EB2127]" />
                         <h3 className="font-semibold text-gray-900">
                           {product.title}
                         </h3>
@@ -535,7 +535,7 @@ const Home = () => {
         <section className="py-16 md:py-24">
           <div className="max-w-7xl mx-auto px-6 lg:px-0">
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <p className="text-[#FA7B70] font-semibold mb-3">
+              <p className="text-[#EB2127] font-semibold mb-3">
                 Client testimonials
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-[#1a365d]">
@@ -547,9 +547,9 @@ const Home = () => {
               {testimonials.map((item, index) => (
                 <FadeInSection key={item.name} delay={index * 0.12}>
                   <article className="h-full rounded-lg border border-gray-100 p-6 shadow-sm">
-                    <div className="flex gap-1 text-[#FA7B70]">
+                    <div className="flex gap-1 text-[#EB2127]">
                       {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} className="h-4 w-4 fill-[#FA7B70]" />
+                        <Star key={star} className="h-4 w-4 fill-[#EB2127]" />
                       ))}
                     </div>
                     <p className="mt-5 text-gray-600 leading-relaxed">
@@ -569,7 +569,7 @@ const Home = () => {
         <section
           className="py-16 md:py-20"
           style={{
-            background: "linear-gradient(90deg, #FA7470 0%, #FA9370 100%)",
+            background: "linear-gradient(90deg, #EB2127 0%, #C81016 100%)",
           }}
         >
           <div className="max-w-5xl mx-auto px-6 text-center">
@@ -582,7 +582,7 @@ const Home = () => {
             </p>
             <Link
               to="/contact"
-              className="mt-8 inline-flex items-center justify-center rounded-lg bg-white px-8 py-3 font-medium text-[#FA7B70] transition-colors hover:bg-gray-100"
+              className="mt-8 inline-flex items-center justify-center rounded-lg bg-white px-8 py-3 font-medium text-[#EB2127] transition-colors hover:bg-gray-100"
             >
               Contact us
             </Link>

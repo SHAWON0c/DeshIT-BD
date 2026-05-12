@@ -397,7 +397,7 @@ body {
 
 
 .animate-ball .ball {
-  background: #F588771C;
+  background: #EB21271C;
   border-radius: 50%;
   position: absolute;
 
@@ -408,7 +408,7 @@ body {
   width: 50px;
   top: 37%;
   left: 10%;
-  background: #F588771C;
+  background: #EB21271C;
   -webkit-animation: zoommd 1.5s infinite alternate;
   animation: zoommd 1.5s infinite alternate;
 }
@@ -418,7 +418,7 @@ body {
   width: 70px;
   bottom: 35%;
   right: 18%;
-  background: #F588771C;
+  background: #EB21271C;
   -webkit-animation: bounce 4s infinite alternate;
   animation: bounce 4s infinite alternate;
 }
@@ -437,7 +437,7 @@ body {
   width: 40px;
   bottom: 20%;
   right: 32%;
-  background: #F588771C;
+  background: #EB21271C;
   -webkit-animation: movexy 1.5s infinite alternate;
   animation: movexy 1.5s infinite alternate;
 }
@@ -447,7 +447,7 @@ body {
   width: 243px;
   top: -45%;
   right: 310px;
-  background:#F588771C;
+  background:#EB21271C;
 
   -webkit-animation: wave 3s 0.1s infinite linear;
   animation: wave 3s 0.1s infinite linear;
@@ -458,7 +458,7 @@ body {
   width: 243px;
   top: -35%;
   right: 100px;
-  background: #F588771C;
+  background: #EB21271C;
 
   animation: wave 4s linear infinite;
   -webkit-animation: wave 4s linear infinite;

@@ -10,7 +10,7 @@ const GlobalSpinner = ({ visible }) => {
         ${visible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}
       `}
     >
-      <div className="w-12 h-12 text-orange-600">
+      <div className="w-12 h-12 text-[#EB2127]">
         <svg fill="currentColor" viewBox="0 0 24 24" className="w-full h-full">
           <circle cx="4" cy="12" r="3">
             <animate id="spinner_jObz" begin="0;spinner_vwSQ.end-0.25s" attributeName="r" dur="0.75s" values="3;.2;3" />

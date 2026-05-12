@@ -89,7 +89,7 @@ const TestimonialSection = () => {
             <button
               key={idx}
               onClick={() => setCurrent(idx)}
-              className={`w-3 h-3 rounded-full ${current === idx ? "bg-orange-500" : "bg-gray-300"
+              className={`w-3 h-3 rounded-full ${current === idx ? "bg-[#EB2127]" : "bg-gray-300"
                 }`}
             />
           ))}
